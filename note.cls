@@ -168,7 +168,7 @@
     \providecommand{\Proof}{证}% 证明环境 (pf) 中的 "证"
     \providecommand{\Answer}{答}% 答环境 (ans) 中的 "答"
 \fi
-\newtheoremstyle{Entry}% 定理风格名称 Theorem style name
+\newtheoremstyle{Exercise}% 定理风格名称 Theorem style name
 {}% 定理上方空间尺寸, 留空为默认 Space above theorem, being left empty means default
 {}% 定理下方空间尺寸, 留空为默认 Space below theorem, being left empty means default
 {}% 定理主体文本字体 Theorem body font
@@ -177,17 +177,10 @@
 {:}% 定理开头后所接标点 Punctuation after theorem head
 { }% 定理开头后所接空间尺寸, 空格为默认词间距 Space after theorem head, whitespace means normal interword space
 {\thmname{#1}\thmnumber{ #2}\thmnote{ \uline{#3}}}% 定理开头格式 Theorem head spec, being left empty means default
-\theoremstyle{Entry}% 设定定理风格 Set theorem style
-\newmdtheoremenv{df}{\Definition}[chapter]% 定义 Definition
-\newmdtheoremenv{ax}{\Axiom}[chapter]% 公理 Axiom
-\newmdtheoremenv{thm}{\Theorem}[chapter]% 定理 Theorem
-\newmdtheoremenv{law}{\Law}[chapter]% 定律 Law
-\newmdtheoremenv{cor}{\Corollary}[chapter]% 引理 Corollary
+\theoremstyle{Exercise}% 设定定理风格 Set theorem style
 \makeatletter
 \def\@endtheorem{\qed\endtrivlist\@endpefalse}% 定理末尾添加 QED 符号 (黑色空心小正方形) Add QED symbols (black hollow small square) to the end of theorems
 \makeatother
-\newtheorem{eg}{\Example}[chapter]% 例 Example
-\newtheorem{prob}{\Problem}[chapter]% 问题 Problem
 \newtheorem{exe}{\Exercise}[chapter]% 习题 Exercise
 \newtheoremstyle{Solution}% 定理风格名称 Theorem style name
 {}% 定理上方空间尺寸, 留空为默认 Space above theorem, being left empty means default
@@ -203,7 +196,6 @@
 \makeatother
 \theoremstyle{Solution}% 设定定理风格 Set theorem style
 \newtheorem*{sol}{\Solution}% 解 Solution
-\newtheorem*{ans}{\Answer}% 答 Answer
 \newtheorem*{pf}{\Proof}% 证明 Proof
 
 \providecommand{\muline}[1]{\text{\uline{$#1$}}}% 公式内下划线 Underlines in equations

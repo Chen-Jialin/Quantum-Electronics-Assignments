@@ -6,7 +6,89 @@
 \setcounter{chapter}{5}
 \fi
 \chapter{光束在均匀介质和类透镜介质中的传播}
-
+\begin{exe}
+    推导 (6.2-1) 至 (6.2-4) 各式.
+\end{exe}
+\begin{pf}
+    对相同透镜构成的波导, (在 $n+1$ 处) 出射和 (在 $n$ 处) 出射光线之间的关系为
+    \begin{align}
+        \begin{bmatrix}
+            r_{n+1}\\
+            r_{n+1}'
+        \end{bmatrix}=\begin{bmatrix}
+            1&d\\
+            -1/f&(1-d/f)
+        \end{bmatrix}\begin{bmatrix}
+            r_n\\
+            r_n'
+        \end{bmatrix},
+    \end{align}
+    或将其写成方程形式为
+    \begin{align}
+        \label{6.1-1}
+        r_{n+1}=&r_n+dr_n',\\
+        \label{6.1-2}
+        r_{n+1}'=&-\frac{1}{f}r_n+\left(1-\frac{d}{f}\right)r_n'.
+    \end{align}
+    由式 \eqref{6.1-1} 得
+    \begin{align}
+        r_n'=\frac{1}{d}(r_{n+1}-r_n),
+    \end{align}
+    因而有
+    \begin{align}
+        r_{n+1}'=\frac{1}{d}(r_{n+2}-r_{n+1}),
+    \end{align}
+    将以上两式代入式 \eqref{6.1-2} 中得
+    \begin{align}
+        \label{6.1-3}
+        r_{n+2}-\left(2-\frac{d}{f}\right)r_{n+1}+r_n=0.
+    \end{align}
+    上式为微分方程
+    \begin{align}
+        r''+\frac{d}{f}r=0
+    \end{align}
+    的差分方程, 故令试探解为
+    \begin{align}
+        r_n=r_0e^{in\theta},
+    \end{align}
+    将其代入式 \eqref{6.1-3} 中可得
+    \begin{align}
+        e^{2i\theta}-\left(2-\frac{d}{f}\right)e^{i\theta}+1=0,
+    \end{align}
+    解得
+    \begin{align}
+        e^{i\theta}=\left(1-\frac{d}{f}\right)\pm i\sqrt{\frac{d}{f}-\frac{d^2}{4f^2}},
+    \end{align}
+    于是得到
+    \begin{align}
+        r_n=r_{\text{最大}}\sin\theta(n\theta+\delta),
+    \end{align}
+    其中
+    \begin{align}
+        \cos\theta=\re\left[e^{i\theta}\right]=\left(1-\frac{d}{2f}\right),
+    \end{align}
+    此即式 (6.2-2),
+    \begin{align}
+        r_{\text{最大}}=\frac{r_0}{\sin\delta}.
+    \end{align}
+    利用 \ref{6.1-1} 得
+    \begin{gather}
+        r_{\text{最大}}\sin(\theta+\delta)=r_0+dr_0',\\
+        \Longrightarrow \frac{r_0}{\sin\delta}(\sin\theta\cos\delta+\cos\theta\sin\delta)=r_0+dr_0',\\
+        \Longrightarrow\tan\delta=\frac{\sin\delta}{\cos\delta}=\frac{r_0\sin\theta}{(r_0+dr_0')-r_0\cos\theta}=\frac{\sqrt{\frac{4f}{d}-1}}{1+2f\frac{r_0'}{r_0}},
+    \end{gather}
+    此即式 (6.2-4), 从而
+    \begin{align}
+        (r_{\text{最大}})^2=\frac{r_0^2}{\sin^2\delta}=\frac{r_0^2(1+\tan^2\delta)}{\tan^2\delta}=\frac{4f}{4f-d}(r_0^2+dr_0r_0'+dfr_0'^2),
+    \end{align}
+    此即式 (6.2-3).
+    光线稳定的条件为
+    \begin{gather}
+        \frac{d}{f}-\frac{d^2}{4f^2}\geq 0,\\
+        \Longrightarrow 0\leq d\leq 4f,
+    \end{gather}
+    此即式 (6.2-1).
+\end{pf}
 \ifx\allfiles\undefined
 \end{document}
 \fi
