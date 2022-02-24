@@ -89,6 +89,52 @@
     \end{gather}
     此即式 (6.2-1).
 \end{pf}
+
+\begin{exe}
+    证明方程
+    \[
+        \begin{bmatrix}
+            A&B\\
+            C&D
+        \end{bmatrix}\begin{bmatrix}
+            r_s\\
+            r_s'
+        \end{bmatrix}=\lambda\begin{bmatrix}
+            r_s\\
+            r_s'
+        \end{bmatrix}
+    \]
+    的本征值是 $\lambda=e^{\pm i\theta}$, 其中 $\exp(\pm i\theta)$ 由式 (6.1-13) 给出. 注意, 按照式 (6.1-5), 上述矩阵方程也可以写为
+    \begin{align}
+        \begin{bmatrix}
+            r_{s+1}\\
+            r_{s+1}'
+        \end{bmatrix}=\lambda\begin{bmatrix}
+            r_s\\
+            r_s'
+        \end{bmatrix}.
+    \end{align}
+\end{exe}
+\begin{pf}
+    上述矩阵的特征方程为
+    \begin{align}
+        \det\left(\begin{vmatrix}
+            A&B\\
+            C&D
+        \end{vmatrix}-\lambda I\right)=\begin{vmatrix}
+            A-\lambda&B\\
+            C&D-\lambda
+        \end{vmatrix}=\lambda^2-(A+D)\lambda+(AD-BC)=\lambda^2-2\lambda+1=0,
+    \end{align}
+    从而解得特征值为
+    \begin{align}
+        \lambda=e^{\pm i\theta},
+    \end{align}
+    其中 $\exp(\pm i\theta)$ 由式 (6.1-13) 给出:
+    \begin{align}
+        e^{\pm i\theta}=b\pm\sqrt{1-b^2}.
+    \end{align}
+\end{pf}
 \ifx\allfiles\undefined
 \end{document}
 \fi
