@@ -135,6 +135,30 @@
         e^{\pm i\theta}=b\pm\sqrt{1-b^2}.
     \end{align}
 \end{pf}
+
+\begin{exe}
+    对于一个平面波入射到透镜上的情况证明式 (6.4-1) 成立, 由此合理地论证式 (6.4-1) 是正确的.
+\end{exe}
+\begin{pf}
+    设透镜的折射率为 $n$, $(x,y)$ 处厚度为 $t(\sqrt{x^2+y^2})$. 当平面波入射到透镜上, 沿光轴入射透镜和平行光轴于 $(x,y)$ 入射透镜的光线汇聚于焦点, 根据费马原理, 两者自入射到汇聚走过的光程相等:
+    \begin{align}
+        nt(0)+f=nt(\sqrt{x^2+y^2})+(t(\sqrt{x^2+y^2})-t(0))+\sqrt{f^2+x^2+y^2}.
+    \end{align}
+    傍轴近似下, 有
+    \begin{gather}
+        nt(0)+f\approx nt(\sqrt{x^2+y^2})+[t(\sqrt{x^2+y^2})-t(0)]+f\left(1+\frac{x^2+y^2}{2f^2}\right),\\
+        \Longrightarrow nt(\sqrt{x^2+y^2})+[t(\sqrt{x^2+y^2})-t(0)]=nt(0)-\frac{x^2+y^2}{2f}.
+    \end{gather}
+    透镜对平面波的作用是引起相移
+    \begin{align}
+        \phi(\sqrt{x^2+y^2})=k\{nt(\sqrt{x^2+y^2})+[t(\sqrt{x^2+y^2})-t(0)]\}=knt(0)-k\frac{x^2+y^2}{2f},
+    \end{align}
+    而不影响振幅, 因此 (忽略整体相因子) 有
+    \begin{align}
+        E_R(x,y)=E_L(x,y)\exp\left(-ik\frac{x^2+y^2}{2f}\right),
+    \end{align}
+    此即式 (6.4-1).
+\end{pf}
 \ifx\allfiles\undefined
 \end{document}
 \fi
