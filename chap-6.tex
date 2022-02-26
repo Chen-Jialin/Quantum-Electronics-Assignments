@@ -166,18 +166,97 @@
 \begin{pf}
     $l$ 处的光线可表为
     \begin{align}
-        r(l)=&r_0\cos\left(\sqrt{\frac{k_2}{k}}l\right),\\
-        r'(l)=&-\sqrt{\frac{k_2}{k}}r_0\sin\left(\sqrt{\frac{k_2}{k}}l\right).
+        r(l^-)=&r_0\cos\left(\sqrt{\frac{k_2}{k}}l\right),\\
+        r'(l^-)=&-\sqrt{\frac{k_2}{k}}r_0\sin\left(\sqrt{\frac{k_2}{k}}l\right).
     \end{align}
     边界处出射可表为
     \begin{align}
-        r_{\text{out}}=&r(l)=r_0\cos\left(\sqrt{\frac{k_2}{k}}l\right),\\
-        r'_{\text{out}}=&n_0r'(l)=-n_0\sqrt{\frac{k_2}{k}}r_0\sin\left(\sqrt{\frac{k_2}{k}}l\right).
+        r(l^+)=&r(l^-)=r_0\cos\left(\sqrt{\frac{k_2}{k}}l\right),\\
+        r'(l^+)=&n_0r'(l^-)=-n_0\sqrt{\frac{k_2}{k}}r_0\sin\left(\sqrt{\frac{k_2}{k}}l\right).
     \end{align}
     公共焦点与出射面之间的距离为
     \begin{gather}
         h=\abs{\frac{r_{\text{out}}}{r'_{\text{out}}}}=\frac{1}{n_0}\sqrt{\frac{k_2}{k}}\cot\left(\sqrt{\frac{k_2}{k}}l\right).
     \end{gather}
+\end{pf}
+
+\begin{exe}
+    证明占据 $0\leq z\leq l$ 区域的类透镜介质把位于 $z<0$ 的轴上点成像为单点. (若成像点位于 $z<l$ 处, 则是虚像.)
+\end{exe}
+\begin{pf}
+    设轴上物点坐标为 $-z_0<0$, 则由该点发出的某条光线可表为 $(0,r_0')$, 经 $-z_0<z<0$ 区域的直线传播后在入射面的入射光线可表为
+    \begin{align}
+        \begin{bmatrix}
+            r(0^-)\\
+            r'(0^-)
+        \end{bmatrix}=\begin{bmatrix}
+            1&z_0\\
+            0&1
+        \end{bmatrix}\begin{bmatrix}
+            0\\
+            r_0'
+        \end{bmatrix}=\begin{bmatrix}
+            z_0r'\\
+            r_0'
+        \end{bmatrix}.
+    \end{align}
+    经入射面折射后, 光线可表为
+    \begin{align}
+        \begin{bmatrix}
+            r(0^+)\\
+            r'(0^+)
+        \end{bmatrix}=\begin{bmatrix}
+            1&0\\
+            0&\frac{1}{n_0}
+        \end{bmatrix}\begin{bmatrix}
+            r(0^-)\\
+            r'(0^-)
+        \end{bmatrix}=\begin{bmatrix}
+            z_0r'\\
+            \frac{r_0'}{n_0}
+        \end{bmatrix}.
+    \end{align}
+    经类透镜介质中传播后, 在出射面处出射前的光线可表为
+    \begin{align}
+        \begin{bmatrix}
+            r(l^-)\\
+            r'(l^-)
+        \end{bmatrix}=\begin{bmatrix}
+            \cos\left(\sqrt{\frac{k_2}{k}}l\right)&\sqrt{\frac{k}{k_2}}\sin\left(\sqrt{\frac{k_2}{k}}l\right)\\
+            -\sqrt{\frac{k_2}{k}}\sin\left(\sqrt{\frac{k_2}{k}}l\right)&\cos\left(\sqrt{\frac{k_2}{k}}l\right)
+        \end{bmatrix}\begin{bmatrix}
+            r(0^+)\\
+            r'(0^+)
+        \end{bmatrix}=\begin{bmatrix}
+            z_0r_0'\cos\left(\sqrt{\frac{k_2}{k}}l\right)+\sqrt{\frac{k}{k_2}}\frac{r_0'}{n_0}\sin\left(\sqrt{\frac{k_2}{k}}l\right)\\
+            -\sqrt{\frac{k_2}{k}}z_0r_0'\sin\left(\sqrt{\frac{k_2}{k}}l\right)+\frac{r_0'}{n_0}\cos\left(\sqrt{\frac{k_2}{k}}l\right)
+        \end{bmatrix}.
+    \end{align}
+    经出射面折射后, 光线可表为
+    \begin{align}
+        \begin{bmatrix}
+            r(l^+)\\
+            r'(l^+)
+        \end{bmatrix}=\begin{bmatrix}
+            1&0\\
+            0&n_0
+        \end{bmatrix}\begin{bmatrix}
+            r(l^-)\\
+            r'(l^-)
+        \end{bmatrix}=\begin{bmatrix}
+            z_0r_0'\cos\left(\sqrt{\frac{k_2}{k}}l\right)+\sqrt{\frac{k}{k_2}}\frac{r_0'}{n_0}\sin\left(\sqrt{\frac{k_2}{k}}l\right)\\
+            -\sqrt{\frac{k_2}{k}}n_0z_0r_0'\sin\left(\sqrt{\frac{k_2}{k}}l\right)+r_0'\cos\left(\sqrt{\frac{k_2}{k}}l\right)
+        \end{bmatrix}.
+    \end{align}
+    在 $z=l+d$ 处,
+    \begin{align}
+        r(l+d)=r(l^+)+dr'(l^+)=z_0r_0'\cos\left(\sqrt{\frac{k_2}{k}}l\right)+\sqrt{\frac{k}{k_2}}\frac{r_0'}{n_0}\sin\left(\sqrt{\frac{k_2}{k}}l\right)+\left[-\sqrt{\frac{k_2}{k}}n_0z_0r_0'\sin\left(\sqrt{\frac{k_2}{k}}l\right)+r_0'\cos\left(\sqrt{\frac{k_2}{k}}l\right)\right]d=0,
+    \end{align}
+    其中
+    \begin{align}
+        d=\frac{n_0z_0\cos\left(\sqrt{\frac{k_2}{k}}l\right)+\sqrt{\frac{k}{k_2}}\sin\left(\sqrt{\frac{k_2}{k}}l\right)}{\sqrt{\frac{k_2}{k}}n_0^2z_0\sin\left(\sqrt{\frac{k_2}{k}}l\right)-n_0\cos\left(\sqrt{\frac{k_2}{k}}l\right)},
+    \end{align}
+    注意到 $r(l+d)=0$ 不依赖于 $r_0'$, 故类透镜介质把轴上物点成像为单点.
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
