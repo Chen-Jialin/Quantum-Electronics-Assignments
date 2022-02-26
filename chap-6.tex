@@ -258,6 +258,159 @@
     \end{align}
     注意到 $r(l+d)=0$ 不依赖于 $r_0'$, 故类透镜介质把轴上物点成像为单点.
 \end{pf}
+
+\begin{exe}
+    推导表 6.1 列出的光线矩阵.
+\end{exe}
+\begin{pf}
+    \begin{itemize}
+        \item[(1)] \textbf{长度为 $d$ 的直线段}: 光线 $(r_i,r_i')$ 在均匀介质中传播 $d$, 则其与光轴的距离变为
+        \begin{align}
+            r_o=r_i+dr_i',
+        \end{align}
+        斜率不变
+        \begin{align}
+            r_o'=r_i',
+        \end{align}
+        故
+        \begin{align}
+            \begin{bmatrix}
+                r_o\\
+                r_o'
+            \end{bmatrix}=\begin{bmatrix}
+                1&d\\
+                0&1
+            \end{bmatrix}\begin{bmatrix}
+                r_i\\
+                r_i'
+            \end{bmatrix}.
+        \end{align}
+        \item[(2)] \textbf{薄透镜 (焦距 $f$)}: 光线 $(r_i,r_i')$ 经过薄透镜, 则其与光轴的距离不变
+        \begin{align}
+            r_o=r_i,
+        \end{align}
+        傍轴近似下, 斜率 $r_o'$ 满足
+        \begin{gather}
+            r_i'-r_o'=\frac{r_o}{f},\\
+            \Longrightarrow r_o='=-\frac{r_o}{f}+r_i',
+        \end{gather}
+        故
+        \begin{align}
+            \begin{bmatrix}
+                r_o\\
+                r_o'
+            \end{bmatrix}=\begin{bmatrix}
+                1&0\\
+                -\frac{1}{f}&0
+            \end{bmatrix}\begin{bmatrix}
+                r_i\\
+                r_i'
+            \end{bmatrix}.
+        \end{align}
+        \item[(3)] \textbf{电介质界面 (折射率 $n_1$, $n_2$)}: 光线 $(r_i,r_i')$ 经过电介质界面折射, 则其与光轴的距离不变
+        \begin{align}
+            r_o=r_i,
+        \end{align}
+        傍轴近似下, 斜率变为
+        \begin{align}
+            r_o'=\frac{n_1}{n_2}r_i',
+        \end{align}
+        故
+        \begin{align}
+            \begin{bmatrix}
+                r_o\\
+                r_o'
+            \end{bmatrix}=\begin{bmatrix}
+                1&0\\
+                0&\frac{n_1}{n_2}
+            \end{bmatrix}\begin{bmatrix}
+                r_i\\
+                r_i'
+            \end{bmatrix}.
+        \end{align}
+        \item[(4)] \textbf{球面电介质界面 (半径 $R$)}: 光线 $(r_i,r_i')$ 经过球面电介质界面折射, 则其与光轴的距离不变
+        \begin{align}
+            r_o=r_i,
+        \end{align}
+        傍轴近似下, 斜率 $r_o'$ 满足
+        \begin{gather}
+            n_1\left(\frac{r_i}{R}-r_i'\right)=n_2\left(\frac{r_i}{R}-r_o'\right),\\
+            \Longrightarrow r_o'=\frac{n_2-n_1}{n_2}\frac{r_i}{R}+\frac{n_1}{n_2}r_i',
+        \end{gather}
+        故
+        \begin{align}
+            \begin{bmatrix}
+                r_o\\
+                r_o'
+            \end{bmatrix}=\begin{bmatrix}
+                1&0\\
+                \frac{n_2-n_1}{n_2}\frac{1}{R}&\frac{n_1}{n_2}
+            \end{bmatrix}\begin{bmatrix}
+                r_i\\
+                r_i'
+            \end{bmatrix}.
+        \end{align}
+        \item[(5)] \textbf{球面反射镜 (曲率半径 $R$)}: 光线 $(r_i,r_i')$ 经过球面反射镜反射, 则其与光轴的距离不变
+        \begin{align}
+            r_o=r_i,
+        \end{align}
+        傍轴近似下, 斜率 $r_o'$ 满足
+        \begin{gather}
+            \frac{r_i}{R}-r_i'=-r_o'-\frac{r_i'}{R},\\
+            \Longrightarrow r_o'=-\frac{2}{R}r_i+r_i',
+        \end{gather}
+        故
+        \begin{align}
+            \begin{bmatrix}
+                r_o\\
+                r_o'
+            \end{bmatrix}=\begin{bmatrix}
+                1&0\\
+                -\frac{2}{R}&1
+            \end{bmatrix}\begin{bmatrix}
+                r_i\\
+                r_i'
+            \end{bmatrix}.
+        \end{align}
+        \item[(6)] \textbf{有二次型折射率变化曲线的介质}: 介质的折射率分布为
+        \begin{align}
+            \label{6.6-n-dist}
+            n(x,y)=n_0\left[1-\frac{k_2}{2k}(x^2+y^2)\right],
+        \end{align}
+        其中 $k_2$ 为常数. 光线在非均匀介质中传播的微分方程为
+        \begin{align}
+            \frac{\mathrm{d}}{\mathrm{d}s}\left(n\frac{\mathrm{d}\bm{r}}{\mathrm{d}s}\right)=\nabla,
+        \end{align}
+        其中 $s$ 为沿光线的切向距离, $\bm{r}$ 为光线的位矢. 傍轴近似下, 可用 $\frac{\mathrm{d}}{\mathrm{d}z}$ 代替 $\frac{\mathrm{d}}{\mathrm{d}s}$, 并将式 \eqref{6.6-n-dist} 代入可得
+        \begin{align}
+            \frac{\mathrm{d}^2r}{\mathrm{d}z^2}+\left(\frac{k_2}{k}\right)r=0,
+        \end{align}
+        对入射光线 $\begin{bmatrix}
+            r(0)\\
+            r'(0)
+        \end{bmatrix}=\begin{bmatrix}
+            r_i\\
+            r_i'
+        \end{bmatrix}$, 解得
+        \begin{align}
+            r(z)=&r_i\cos\left(\sqrt{\frac{k_2}{k}}z\right)+\sqrt{\frac{k}{k_2}}r_i'\sin\left(\sqrt{\frac{k_2}{k}}z\right),\\
+            r'(z)=&-\sqrt{\frac{k_2}{k}}r_i\sin\left(\sqrt{\frac{k_2}{k}}z\right)+r_i'\cos\left(\sqrt{\frac{k_2}{k}}z\right),
+        \end{align}
+        故
+        \begin{align}
+            \begin{matrix}
+                r(l)\\
+                r'(l)
+            \end{matrix}=\begin{bmatrix}
+                \cos\left(\sqrt{\frac{k_2}{k}}l\right)&\sqrt{\frac{k}{k_2}}\sin\left(\sqrt{\frac{k_2}{k}}l\right)\\
+                -\sqrt{\frac{k_2}{k}}\sin\left(\sqrt{\frac{k_2}{k}}l\right)&\cos\left(\sqrt{\frac{k_2}{k}}l\right)
+            \end{bmatrix}\begin{bmatrix}
+                r_i\\
+                r_i'
+            \end{bmatrix}.
+        \end{align}
+    \end{itemize}
+\end{pf}
 \ifx\allfiles\undefined
 \end{document}
 \fi
