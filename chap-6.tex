@@ -411,6 +411,67 @@
         \end{align}
     \end{itemize}
 \end{pf}
+
+\begin{exe}
+    若透镜相对于入射光束置于任意位置处 (即不置于腰部), 对于这种情况求解导出式 (6.7-11) 和 (6.7-12) 的问题.
+\end{exe}
+\begin{pf}
+    设入射高斯光束的束腰半径为 $\omega_{01}$, 透镜位于距入射光束束腰 $z_1$ 处, 则透镜前表面处光斑半径的平方 $\omega_1^2=[\omega_1(z_1)]^2=\omega_{01}^2\left[1+\left(\frac{z_1}{z_{01}}\right)^2\right]$, 等相位面曲率半径 $R_1=R_1(z_1)=z_1\left[1+\left(\frac{z_{01}}{z_1}\right)^2\right]$, 其中 $z_{01}=\frac{\pi\omega_{01}^2n}{\lambda}$, 因而
+    \begin{align}
+        \frac{1}{q_1}=\frac{1}{R_1}-i\frac{\lambda}{\pi n\omega_1^2}=\frac{1}{z_1+iz_{01}}.
+    \end{align}
+    光束经过透镜折射, 在透镜后表面的参量为
+    \begin{gather}
+        \frac{1}{q_2}=\frac{1}{q_1}-\frac{1}{f},\\
+        \Longrightarrow q_2=\frac{f(z_1+z_{01})}{f-(z_1+iz_{01})}.
+    \end{gather}
+    光束经过距离 $l$ 的传播, 在平面 (3) 处的参量为
+    \begin{gather}
+        q_3=q_2+l=\frac{(f-l)(z_1+iz_{01})+fl}{f-(z_1+iz_{01})},\\
+        \Longrightarrow\frac{1}{q_3}=\frac{1}{R_3}-i\frac{\lambda}{\pi\omega_3^2n}=\frac{\{(f-z_1)[(f-l)z_1+fl]-z_{01}^2(f-l)\}-if^2z_{01}}{[(f-l)z_1+fl]^2+[(f-l)z_{01}]^2}.
+    \end{gather}
+    在新束腰位置处 $R_3=\infty$, 由此得新束腰位置为
+    \begin{align}
+        l=\frac{f}{1+\frac{f(f-z_1)}{z_{01}^2-(f-z_1)z_1}},
+    \end{align}
+    且新束腰半径与原束腰半径之比为
+    \begin{align}
+        \frac{\omega_3}{\omega_{01}}=\frac{\frac{f}{z_{01}}}{\sqrt{1+\left(\frac{f-z_1}{z_{01}}\right)^2}}.
+    \end{align}
+\end{pf}
+
+\begin{exe}
+    \begin{itemize}
+        \item[(a)] 若高斯光束垂直入射到折射率为 $n$ 的固体棱镜上, 如下图所示.
+        试求出射光束的远场衍射角.
+        \item[(b)] 若棱镜向左移动一直到它的入射面位于 $s=-l_1$ 处. 试求出新的出射光束的腰部大小及腰部位置. (假设晶体足够长, 以致光束的腰部位于晶体内.)
+    \end{itemize}
+\end{exe}
+\begin{sol}
+    \begin{itemize}
+        \item[(a)] 
+        \item[(b)] 
+    \end{itemize}
+\end{sol}
+
+\begin{exe}
+    波长为 $\lambda$ 的高斯光束入射到置于 $Z=l$ 的透镜上, 如下图所示.
+    要使出射光束的腰位于晶体样品的前表面上, 试计算透镜的焦距 $f$. 证明 (对给定的 $l$ 和 $L$) 可能存在两个解. 对每个解画出光束的传播情况.
+\end{exe}
+\begin{pf}
+    
+\end{pf}
+
+\begin{exe}
+    补全 6.12 节推导过程中所有略去的步骤.
+\end{exe}
+\begin{pf}
+    
+\end{pf}
+
+\begin{exe}
+
+\end{exe}
 \ifx\allfiles\undefined
 \end{document}
 \fi
