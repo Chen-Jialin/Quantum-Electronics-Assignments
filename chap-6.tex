@@ -430,7 +430,7 @@
         q_3=q_2+l=\frac{(f-l)(z_1+iz_{01})+fl}{f-(z_1+iz_{01})},\\
         \Longrightarrow\frac{1}{q_3}=\frac{1}{R_3}-i\frac{\lambda}{\pi\omega_3^2n}=\frac{\{(f-z_1)[(f-l)z_1+fl]-z_{01}^2(f-l)\}-if^2z_{01}}{[(f-l)z_1+fl]^2+[(f-l)z_{01}]^2}.
     \end{gather}
-    在新束腰位置处 $R_3=\infty$, 由此得新束腰位置为
+    在新束腰处 $R_3=\infty$, 由此得新束腰位置为
     \begin{align}
         l=\frac{f}{1+\frac{f(f-z_1)}{z_{01}^2-(f-z_1)z_1}},
     \end{align}
@@ -449,8 +449,67 @@
 \end{exe}
 \begin{sol}
     \begin{itemize}
-        \item[(a)] 
-        \item[(b)] 
+        \item[(a)] $z=l_1$ 处入射固体棱镜前, 高斯光束光斑半径的平方为
+        \begin{align}
+            [\omega(l_1^-)]^2=\omega_0^2\left[1+\left(\frac{z_1}{z_0}\right)^2\right],
+        \end{align}
+        等相位面曲率半径为
+        \begin{align}
+            R(l_1^-)=z_1\left[1+\left(\frac{z_0}{z_1}\right)^2\right],
+        \end{align}
+        其中 $z_0=\frac{\pi\omega_0^2n}{\lambda}$, 因而
+        \begin{gather}
+            \frac{1}{q(l_1^-)}=\frac{1}{R(l_1^-)}-i\frac{\lambda}{\pi n[\omega(l_1^-)]^2}=\frac{1}{l_1+iz_0},\\
+            \Longrightarrow q(l_1^-)=l_1+iz_0.
+        \end{gather}
+        $z=l_1$ 处, 光束入射后的参量为
+        \begin{align}
+            q(l_1^+)=\frac{q(l_1^-)}{\frac{1}{n}}=n(l_1+iz_0).
+        \end{align}
+        $z=l_2$ 出射前光束的参量为
+        \begin{align}
+            q(l_2^-)=q(l_1^+)+(l_2-l_1)=n(l_1+iz_0)+(l_2-l_1).
+        \end{align}
+        $z=l_2$ 光束出射后的参量为
+        \begin{align}
+            q(l_2^+)=\frac{q(l_2^-)}{n}=(l_1+iz_0)+\frac{l_2-l_1}{n}.
+        \end{align}
+        $z=l_3$ 处光束的参量为
+        \begin{align}
+            q(l_3)=q(l_2^+)+l=(l_1+iz_0)+\frac{l_2-l_1}{n}+(l_3-l_2).
+        \end{align}
+        由
+        \begin{align}
+            \frac{1}{q(l_3)}=\frac{1}{R(l_3)}-i\frac{\lambda}{\pi n[\omega(l_3)]^2},
+        \end{align}
+        得光束等相位面曲率半径
+        \begin{align}
+            \frac{1}{R_3}=\frac{l_1+\frac{l_2-l_1}{n}+(l_3-l_2)}{\left[l_1+\frac{l_2-l_1}{n}+(l_3-l_2)\right]^2+z_0^2},
+        \end{align}
+        及束腰半径
+        \begin{align}
+            \omega(l_3)=\omega_0\sqrt{1+\left[\frac{l_1+\frac{l_2-l_1}{n}+(l_3-l_2)}{z_0}\right]^2}
+        \end{align}
+        在新束腰处 $R(l_3)=\infty$, 由此得
+        \begin{align}
+            l_3=l_2-\left(l_1+\frac{l_2-l_1}{n}\right),
+        \end{align}
+        及新束腰半径
+        \begin{align}
+            \omega_0'=\omega_0.
+        \end{align}
+        此时出射光束的远场衍射角为
+        \begin{align}
+            \theta\approx\frac{\lambda}{\pi\omega_0'n}=\frac{\lambda}{\pi\omega_0n}.
+        \end{align}
+        \item[(b)] 当棱镜入射面位于 $z=-l_1$ 处, 则新的出射光束的腰部半径为
+        \begin{align}
+            \omega_0'=\omega_0,
+        \end{align}
+        位置为
+        \begin{align}
+            l_3=(l_1+l_2)-\frac{l_1+l_2}{n}.
+        \end{align}
     \end{itemize}
 \end{sol}
 
