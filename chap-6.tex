@@ -449,15 +449,7 @@
 \end{exe}
 \begin{sol}
     \begin{itemize}
-        \item[(a)] $z=l_1$ 处入射固体棱镜前, 高斯光束光斑半径的平方为
-        \begin{align}
-            [\omega(l_1^-)]^2=\omega_0^2\left[1+\left(\frac{z_1}{z_0}\right)^2\right],
-        \end{align}
-        等相位面曲率半径为
-        \begin{align}
-            R(l_1^-)=z_1\left[1+\left(\frac{z_0}{z_1}\right)^2\right],
-        \end{align}
-        其中 $z_0=\frac{\pi\omega_0^2n}{\lambda}$, 因而
+        \item[(a)] $z=l_1$ 处入射固体棱镜前, 高斯光束光斑半径的平方为 $[\omega(l_1^-)]^2=\omega_0^2\left[1+\left(\frac{l_1}{z_0}\right)^2\right]$, 等相位面曲率半径为 $R(l_1^-)=z_1\left[1+\left(\frac{z_0}{l_1}\right)^2\right]$, 其中 $z_0=\frac{\pi\omega_0^2n}{\lambda}$, 因而
         \begin{gather}
             \frac{1}{q(l_1^-)}=\frac{1}{R(l_1^-)}-i\frac{\lambda}{\pi n[\omega(l_1^-)]^2}=\frac{1}{l_1+iz_0},\\
             \Longrightarrow q(l_1^-)=l_1+iz_0.
@@ -518,7 +510,15 @@
     要使出射光束的腰位于晶体样品的前表面上, 试计算透镜的焦距 $f$. 证明 (对给定的 $l$ 和 $L$) 可能存在两个解. 对每个解画出光束的传播情况.
 \end{exe}
 \begin{pf}
-    
+    利用习题 6.7  的结论, 新束腰距离透镜
+    \begin{gather}
+        \frac{f}{1+\frac{f(f-l)}{z_0^2-(f-l)l}}=L,\\
+        \Longrightarrow(l+L)f^2-(l^2+2lL+z_0^2)f+(l^2+z_0^2)L=0,
+    \end{gather}
+    解得当 $(l^2+z_0^2)^2-4L^2z_0^2\geq 0$ 时,
+    \begin{align}
+        f=\frac{l^2+2lL+z_0^2\pm\sqrt{(l^2+z_0^2)^2-4L^2z_0^2}}{l+L}.
+    \end{align}
 \end{pf}
 
 \begin{exe}
