@@ -570,7 +570,54 @@
     推导式 (6.10-4) 和 (6.10-5).
 \end{exe}
 \begin{pf}
-    
+    二次型折射率变化的介质中矢量波动方程为
+    \begin{align}
+        \nabla^2\bm{E}+k^2\left(1-\frac{n_2}{n}r^2\right)\bm{E}=0,
+    \end{align}
+    其中光束在折射率为 $n$ 的均匀介质中的传播常数 $k=\frac{2\pi n}{\lambda}$.
+    设标量场的形式为 $E(\bm{r})=\psi(\bm{r})\exp(i\beta z)$, 从而上述方程化为
+    \begin{align}
+        \frac{\partial^2\psi}{\partial x^2}+\frac{\partial^2\psi}{\partial y^2}+\left[k^2\left(1-\frac{n_2}{n}r^2\right)-\beta^2\right]\psi=0.
+    \end{align}
+    取 $\psi=f(x)g(y)$, 并将上式除以 $\psi$ 得
+    \begin{align}
+        \frac{1}{f}\frac{\mathrm{d}^2f}{\mathrm{d}x^2}+\left(\lambda-k^2\frac{n_2}{n}x^2\right)=-\frac{1}{g}\frac{\mathrm{d}^2g}{\mathrm{d}y^2}-\left[(k^2-\beta^2-\lambda)-k^2\frac{n_2}{n}y^2\right].
+    \end{align}
+    分离变量得两个微分方程:
+    \begin{align}
+        \frac{\mathrm{d}^2f}{\mathrm{d}x^2}+\left(\lambda_1-k^2\frac{n_2}{n}x^2\right)f=&0,\\
+        \frac{\mathrm{d}^2g}{\mathrm{d}y^2}+\left[(k^2-\beta^2-\lambda_1)-k^2\frac{n_2}{n}y^2\right]g=&0.
+    \end{align}
+    作变量代换
+    \begin{align}
+        \xi=\frac{\sqrt{2}x}{\omega},\quad\omega=\left(\frac{\lambda}{\pi}\right)^{1/2}\left(\frac{1}{nn_2}\right)^{1/4},
+    \end{align}
+    从而将上面的微分方程化为
+    \begin{align}
+        \frac{\mathrm{d}^2f}{\mathrm{d}\xi^2}+\left(\frac{\omega^2\lambda_1}{2}-\xi^2\right)f=0.
+    \end{align}
+    假设上述方程的解具有如下形式:
+    \begin{align}
+        f\left(\frac{\omega\xi}{\sqrt{2}}\right)=H(\xi)e^{-\xi^2/2},
+    \end{align}
+    其中 $H(\xi)$ 是一个有限级数的多项式.
+    将该假设解代入微分方程得
+    \begin{align}
+        \frac{\mathrm{d}^2H}{\mathrm{d}\xi^2}-2\xi\frac{\mathrm{d}H}{\mathrm{d}\xi}+\left(\frac{\omega^2\lambda_1}{2}-1\right)H=0,
+    \end{align}
+    从而解得 $H(\xi)$ 为厄米多项式 $H_l(\xi)$, 且
+    \begin{align}
+        \frac{\omega^2\lambda_1}{2}=2l+1.
+    \end{align}
+    对关于 $y$ 的微分方程也可同理求解, 故
+    \begin{align}
+        \psi_{l,m}(x,y)=f_l(x)g_m(y)=E_0H_l\left(\sqrt{2}\frac{x}{\omega}\right)H_m\left(\sqrt{2}\frac{y}{\omega}\right)\exp\left(-\frac{x^2+y^2}{\omega^2}\right),
+    \end{align}
+    且
+    \begin{gather}
+        k^2-\beta^2=\lambda_1+(k^2-\beta^2-\lambda_1)=\frac{2}{\omega^2}[(2l+1)+(2m+1)],\\
+        \Longrightarrow\beta_{l,m}=k\left[1-\frac{2}{k}\sqrt{\frac{n_2}{n}}(l+m+1)\right]^{1/2}.
+    \end{gather}
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
