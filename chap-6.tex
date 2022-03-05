@@ -529,8 +529,49 @@
 \end{pf}
 
 \begin{exe}
-
+    证明式 (6.10-10).\\
+    提示: 把光脉冲场看作载波和包络函数的乘积
+    \[
+        E(z,t)=E_0e^{i(\omega_0t-k_0z)}\int_{-\infty}^{+\infty}G(\Delta\omega)e^{i(\Delta\omega t-\Delta kz)}\,\mathrm{d}(\Delta\omega)
+    \]
+    式中 $\Delta\omega\equiv\omega-\omega_0$, $\Delta k=k(\omega)-k_0$.
 \end{exe}
+\begin{pf}
+    由傅里叶变换得光场频谱为
+    \begin{align}
+        G(\Delta\omega)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\frac{E(z,t)}{E_0}e^{-i[(\omega_0+\Delta\omega)\tau-(k_0+\Delta k)z]}\,\mathrm{d}\tau.
+    \end{align}
+    对一个持续时间为 $\tau$ 的光脉冲, 该脉冲的谱宽满足
+    \begin{gather}
+        \Delta\omega\frac{\tau}{2}=\pi,\\
+        \Longrightarrow\Delta\omega=\frac{2\pi}{\tau}.
+    \end{gather}
+    单频光传播距离 $L$ 所用的时间为
+    \begin{align}
+        t=\frac{L}{v_g}.
+    \end{align}
+    该脉冲传输距离 $L$ 后, 增宽为
+    \begin{align}
+        \Delta\tau\approx\abs{\frac{\mathrm{d}\tau}{\mathrm{d}t}}\Delta\omega=\abs{\frac{\mathrm{d}\left(\frac{L}{v_g}\right)}{\mathrm{d}\omega}}\Delta\omega=\frac{L}{v_g^2}\frac{\mathrm{d}v_g}{\mathrm{d}\omega}\frac{2\pi}{\tau}.
+    \end{align}
+\end{pf}
+
+\begin{exe}
+    一根二次型折射率变化的玻璃纤维长 $1000$ 米, $n=1.5$, $n_2=5\times 10^2$ 厘米${}^{-2}$. 波长 $\lambda=1$ 微米的光束在此纤维中传播, 试求在 (a) 单模 $l=m=0$ 激发情况下, (b) $l=m=5$ 情况下此载波的光斑尺寸及最大的脉冲重复频率.
+\end{exe}
+\begin{sol}
+    \begin{itemize}
+        \item[(a)] 
+        \item[(b)] 
+    \end{itemize}
+\end{sol}
+
+\begin{exe}
+    推导式 (6.10-4) 和 (6.10-5).
+\end{exe}
+\begin{pf}
+    
+\end{pf}
 \ifx\allfiles\undefined
 \end{document}
 \fi
