@@ -71,7 +71,7 @@
     \begin{align}
         r_{\text{最大}}=\frac{r_0}{\sin\delta}.
     \end{align}
-    利用 \ref{6.1-1} 得
+    利用 \eqref{6.1-1} 得
     \begin{gather}
         r_{\text{最大}}\sin(\theta+\delta)=r_0+dr_0',\\
         \Longrightarrow \frac{r_0}{\sin\delta}(\sin\theta\cos\delta+\cos\theta\sin\delta)=r_0+dr_0',\\
@@ -525,7 +525,167 @@
     补全 6.12 节推导过程中所有略去的步骤.
 \end{exe}
 \begin{pf}
-    
+    仿照 6.5 节, 取 $E=\psi(x,y,z)e^{-ikz}$, 将亥姆霍兹方程化为
+    \begin{align}
+        \label{6.10-1}
+        \nabla_t^2\psi-2ik\psi'-k(k_{2x}x^2+k_{2y}y^2)\psi=0,
+    \end{align}
+    其中 $\psi'=\frac{\partial\psi}{\partial z}$.
+    假设波动方程的一个解为
+    \begin{align}
+        \psi=\exp\left\{-i\left[P(z)+\frac{Q(z)x^2}{2}+\frac{Q_y(z)y^2}{2}\right]\right\},
+    \end{align}
+    将其代入式 \eqref{6.10-1} 得
+    \begin{align}
+        Q_x^2x^2+Q_yy^2+iQ_x+iQ_y+2kP'+k(Q_x'x+Q_y'y)+kk_2(x^2+y^2)=0.
+    \end{align}
+    上式对任一 $x,y$ 均成立, 故 $x,y$ 的各次幂的系数均等于零, 从而导出
+    \begin{align}
+        \label{6.10-2}
+        Q_x^2+k\frac{\mathrm{d}Q_x}{\mathrm{d}z}+kk_{2x}=0,\quad Q_y^2+k\frac{\mathrm{d}Q_y}{\mathrm{d}z}+kk_{2y}=0
+    \end{align}
+    和
+    \begin{align}
+        \label{6.10-5}
+        \frac{\mathrm{d}P}{\mathrm{d}z}=-i\left(\frac{Q_x+Q_y}{2k}\right).
+    \end{align}
+    假设介质均匀, 则 $k_{2x}=k_{2y}=0$, 式 \eqref{6.10-2} 可化为
+    \begin{align}
+        \label{6.10-3}
+        Q_x^2+k\frac{\mathrm{d}Q_x}{\mathrm{d}z}=0,\quad Q_y^2+k\frac{\mathrm{d}Q_y}{\mathrm{d}z}=0.
+    \end{align}
+    引入函数 $s_x(z)$ 和 $s_y(z)$, 满足
+    \begin{align}
+        Q_x=k\frac{s_x'}{s_x},\quad Q_y=k\frac{s_y'}{s_y}.
+    \end{align}
+    由式 \eqref{6.10-3} 可得
+    \begin{align}
+        s_x''=0,\quad s_y''=0,
+    \end{align}
+    因而
+    \begin{align}
+        s_x=a_xz+b_x,\quad s_y=a_yz+b_y,
+    \end{align}
+    或
+    \begin{align}
+        \label{6.10-4}
+        Q_x(z)=k\frac{a_x}{a_xz+b_z},\quad Q_y(z)=k\frac{a_y}{a_yz+b_y},
+    \end{align}
+    其中 $a_x,b_x,a_y,b_y$ 为任意常数.
+    定义
+    \begin{align}
+        q_x(z)=\frac{k}{Q_x(z)},\quad q_y(z)=\frac{k}{Q_y(z)},
+    \end{align}
+    从而将式 \eqref{6.10-4} 改写为
+    \begin{align}
+        q_x=z+C_x,\quad q_y=z+C_y,
+    \end{align}
+    其中 $C_x$ 和 $C_y$ 为任意积分常数.
+    将 $C_x$ 和 $C_y$ 写成如下形式:
+    \begin{align}
+        C_x=-z_x+q_{0x},\quad C_y=-z_y+q_{0y},
+    \end{align}
+    其中 $z_x$ 和 $z_y$ 为实数, $q_{0x}$ 和 $q_{0y}$ 为虚数.
+    将 $q_x(z)$ 和 $q_y(z)$ 代入式 \eqref{6.10-5} 可得
+    \begin{align}
+        P'=-\frac{i}{2}\left[\frac{1}{z+C_x}+\frac{1}{z+C_y}\right],
+    \end{align}
+    取积分常数为零得
+    \begin{align}
+        P=-\frac{i}{2}\left[\ln\left(1+\frac{z-z_x}{q_{0x}}\right)+\ln\left(1+\frac{z-z_y}{q_{0y}}\right)\right].
+    \end{align}
+    将上式代入 $\psi$ 的假设解中得
+    \begin{align}
+        \label{6.10-6}
+        \psi=\exp\left\{-i\left[-\frac{i}{2}\ln\left(1+\frac{z-z_x}{q_0}\right)-\frac{i}{2}\ln\left(1+\frac{z-z_y}{q_{0y}}\right)+\frac{kx^2}{2(q_{0x}+z-z_x)}+\frac{ky^2}{2(q_{0y}+z-z_y)}\right]\right\}.
+    \end{align}
+    取
+    \begin{gather}
+        q_{0x}=i\frac{\pi\omega_{ox}^2n}{\lambda},\quad q_{0y}=i\frac{\pi\omega_{0y}^2n}{\lambda},
+    \end{gather}
+    则式 \eqref{6.10-6} 中的
+    \begin{align}
+        \notag&\exp\left[-\frac{1}{2}\ln\left(1+\frac{z-z_x}{q_{0x}}\right)-\frac{1}{2}\ln\left(1+\frac{z-z_y}{q_{0y}}\right)\right]=\frac{1}{\left[1+\frac{z-z_x}{q_{0x}}\right]^{1/2}\left[1+\frac{z-z_y}{q_{0y}}\right]^{1/2}}\\
+        \notag=&\frac{1}{\left[\sqrt{1+\abs{\frac{z-z_x}{q_{0x}}}^2}\exp\left(i\arctan\frac{z-z_x}{iq_{0y}}\right)\right]^{1/2}\left[\sqrt{1+\abs{\frac{z-z_y}{q_{0y}}}^2}\exp\left(i\arctan\frac{z-z_y}{iq_{0y}}\right)\right]^{1/2}}\\
+        =&\frac{\sqrt{\omega_{0x}\omega_{0y}}}{\sqrt{\omega_x(z)\omega_y(z)}}\exp[i\eta(z)],
+    \end{align}
+    其中
+    \begin{gather}
+        \omega_x^2(z)=\omega_{0x}^2\left[1+\left(\frac{\lambda(z-z_x)}{\pi\omega_{0x}^2n}\right)^2\right],\quad\omega_y^2(z)=\omega_{0y}^2\left[1+\left(\frac{\lambda(z-z_y)}{\pi\omega_{0y}^2n}\right)^2\right],\\
+        \eta=\frac{1}{2}\tan^{-1}\left(\frac{\lambda(z-z_x)}{\pi\omega_{0x}^2n}\right)+\frac{1}{2}\tan^{-1}\left(\frac{\lambda(z-z_y)}{\pi\omega_{0y}^2n}\right).
+    \end{gather}
+    式 \eqref{6.10-6} 中的
+    \begin{align}
+        \notag&\exp\left[\frac{-ikx^2}{2(q_{0x}+z-z_x)}+\frac{-iky^2}{2(q_0+z-z_y)}\right]=\exp\left\{\frac{-i\frac{k}{q_{0x}}x^2}{2\left(1+\frac{z-z_{0x}}{q_{0x}}\right)}+\frac{-i\frac{k}{q_{0y}}y^2}{2\left(1+\frac{z-z_{0y}}{q_{0y}}\right)}\right\}\\
+        \notag=&\exp\left\{-x^2\frac{1}{\omega_{0x}^2\left(1+\frac{z-z_x}{q_{0x}}\right)}-y^2\frac{1}{\omega_{0y}^2\left(1+\frac{z-z_y}{q_{0y}}\right)}\right\}\\
+        \notag=&\exp\left\{-x^2\frac{1-\frac{z-z_x}{q_{0x}}}{\omega_{0x}^2\left(1+\abs{\frac{z-z_x}{q_{0x}}}^2\right)}-y^2\frac{1-\frac{z-z_y}{q_{0y}}}{\omega_{0y}^2\left(1+\abs{\frac{z-z_y}{q_{0y}}}^2\right)}\right\}\\
+        =&\exp\left\{-x^2\left(\frac{1}{\omega_x^2(x)}+\frac{ik}{2R_x(z)}\right)-y^2\left(\frac{1}{\omega_y^2(z)}+\frac{ik}{2R_y(z)}\right)\right\},
+    \end{align}
+    其中
+    \begin{align}
+        R_x(z)=(z-z_x)\left[1+\left(\frac{\pi\omega_{0x}^2n}{\lambda(z-z_x)}\right)^2\right],\quad R_y(z)=(z-z_y)\left[1+\left(\frac{\pi\omega_{0y}^2n}{\lambda(z-z_y)}\right)\right].
+    \end{align}
+    综上, 在均匀介质中,
+    \begin{align}
+        \notag E(x,y,z)=&E_0\frac{\sqrt{\omega_{0x}\omega_{0y}}}{\sqrt{\omega_x(z)\omega_y(z)}}\exp\left\{-i[kz-\eta(z)]-\frac{ikx^2}{2q_x(z)}-\frac{iky^2}{2q_y(z)}\right\}\\
+        =&E_0\frac{\sqrt{\omega_{0x}\omega_{0y}}}{\sqrt{\omega_x(z)\omega_y(z)}}\exp\left\{-i[kz-\eta(z)]-x^2\left(\frac{1}{\omega_x^2(z)}+\frac{ik}{2R_x(z)}\right)-y^2\left(\frac{1}{\omega_y^2(z)}+\frac{ik}{2R_y(z)}\right)\right\}.
+    \end{align}
+    对比 $\psi$ 的假设解和上式可得
+    \begin{align}
+        \frac{1}{q_x(z)}=&\frac{1}{R_x(z)}-i\frac{\lambda}{\pi n\omega_x^2(z)},\\
+        \frac{1}{q_y(z)}=&\frac{1}{R_y(z)}-i\frac{\lambda}{\pi n\omega_y^2(z)}.
+    \end{align}
+
+    在折射率分布为
+    \begin{align}
+        n^2(\bm{r})=n^2\left(1-\frac{n_{2x}}{n}x^2-\frac{n_{2y}}{n}y^2\right)
+    \end{align}
+    的二次型类透镜介质中, 亥姆霍兹方程可化为
+    \begin{align}
+        \nabla^2\bm{E}+k^2\left(1-\frac{n_{2x}}{n}x^2-\frac{n_{2y}}{n}y^2\right).
+    \end{align}
+    假设标量场的形式为 $E(\bm{r})=\psi(\bm{r})\exp(-i\beta z)$, 则上述方程可化为
+    \begin{align}
+        \frac{\partial^2\psi}{\partial x^2}+\frac{\partial^2\psi}{\partial y^2}+\left[k^2\left(1-\frac{n_{2x}}{n}x^2-\frac{n_{2y}}{n}y^2\right)-\beta^2\right]\psi=0.
+    \end{align}
+    取 $\psi=f(x)g(y)$, 并将上式除以 $\psi$ 得
+    \begin{align}
+        \frac{1}{f}\frac{\mathrm{d}^2f}{\mathrm{d}x^2}+\left(\lambda_1-k^2\frac{n_{2x}}{n}x^2\right)=-\frac{1}{g}\frac{\mathrm{d}^2g}{\mathrm{d}y^2}+\left[(k^2-\beta^2-\lambda_1)-k^2\frac{n_2}{n}y^2\right],
+    \end{align}
+    分离变量得两个微分方程:
+    \begin{align}
+        \frac{\mathrm{d}^2f}{\mathrm{d}x^2}+\left(\lambda_1-k^2\frac{n_2}{n}x^2\right)f=&0,\\
+        \frac{\mathrm{d}^2g}{\mathrm{d}y^2}+\left[(k-\beta^2-\lambda_1)-k^2\frac{n_2}{n}y^2\right]g=0.
+    \end{align}
+    做变量代换
+    \begin{align}
+        \xi=\frac{\sqrt{2}x}{\omega_x},\quad\omega_x=\left(\frac{\lambda_1}{\pi}\right)^{1/2}\left(\frac{1}{nn_{2x}}\right)^{1/4},
+    \end{align}
+    从而将上面的微分方程化为
+    \begin{align}
+        \frac{\mathrm{d}^2f}{\mathrm{d}\xi^2}+\left(\frac{\omega_x^2\lambda_1}{2}-\xi^2\right)f=0.
+    \end{align}
+    假设上述方程的解具有如下形式:
+    \begin{align}
+        f\left(\frac{\omega_x\xi}{\sqrt{2}}\right)=H(\xi)e^{-\xi^2/2},
+    \end{align}
+    其中 $H(\xi)$ 是一个有限级数的多项式. 将该假设解代入微分方程得
+    \begin{align}
+        \frac{\mathrm{d}^2H}{\mathrm{d}\xi^2}-2\xi\frac{\mathrm{d}H}{\mathrm{d}\xi}+\left(\frac{\omega_x^2\lambda_1}{2}-1\right)H=0,
+    \end{align}
+    从而解得 $H(\xi)$ 为厄米多项式 $H_l(\xi)$, 且
+    \begin{align}
+        \frac{\omega_x^2\lambda_1}{2}=2l+1.
+    \end{align}
+    对关于 $y$ 的微分方程也可同理求解, 故
+    \begin{align}
+        E_{l,m}(\bm{r})=E_0e^{-i\beta_{l,m}z}H_l\left(\sqrt{2}\frac{x}{\omega_x}\right)H_m\left(\sqrt{2}\frac{y}{\omega_y}\right)\exp\left(-\frac{x^2}{\omega_x^2}-\frac{y^2}{\omega_y^2}\right),
+    \end{align}
+    且
+    \begin{gather}
+        k^2-\beta^2=\lambda_1^2+(k^2-\beta^2-\lambda_1)=\frac{2}{\omega_x^2}[2(l+1)]+\frac{2}{\omega_y^2}[2(m+1)],\\
+        \Longrightarrow\beta_{l,m}=k\left\{1-\frac{2}{k}\left[\sqrt{\frac{n_{2x}}{n}}\left(l+\frac{1}{2}\right)+\sqrt{\frac{n_{2y}}{n}}\left(m+\frac{1}{2}\right)\right]\right\}^{1/2}.
+    \end{gather}
 \end{pf}
 
 \begin{exe}
@@ -596,7 +756,7 @@
     \end{align}
     取 $\psi=f(x)g(y)$, 并将上式除以 $\psi$ 得
     \begin{align}
-        \frac{1}{f}\frac{\mathrm{d}^2f}{\mathrm{d}x^2}+\left(\lambda-k^2\frac{n_2}{n}x^2\right)=-\frac{1}{g}\frac{\mathrm{d}^2g}{\mathrm{d}y^2}-\left[(k^2-\beta^2-\lambda)-k^2\frac{n_2}{n}y^2\right].
+        \frac{1}{f}\frac{\mathrm{d}^2f}{\mathrm{d}x^2}+\left(\lambda_1-k^2\frac{n_2}{n}x^2\right)=-\frac{1}{g}\frac{\mathrm{d}^2g}{\mathrm{d}y^2}-\left[(k^2-\beta^2-\lambda_1)-k^2\frac{n_2}{n}y^2\right],
     \end{align}
     分离变量得两个微分方程:
     \begin{align}
@@ -605,7 +765,7 @@
     \end{align}
     作变量代换
     \begin{align}
-        \xi=\frac{\sqrt{2}x}{\omega},\quad\omega=\left(\frac{\lambda}{\pi}\right)^{1/2}\left(\frac{1}{nn_2}\right)^{1/4},
+        \xi=\frac{\sqrt{2}x}{\omega},\quad\omega=\left(\frac{\lambda_1}{\pi}\right)^{1/2}\left(\frac{1}{nn_2}\right)^{1/4},
     \end{align}
     从而将上面的微分方程化为
     \begin{align}
