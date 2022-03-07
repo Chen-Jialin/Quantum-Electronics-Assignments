@@ -1,0 +1,93 @@
+% !Tex program = pdflatex
+% 第 7 章: 光学谐振腔
+\ifx\allfiles\undefined
+\documentclass{note}
+\begin{document}
+\setcounter{chapter}{7}
+\fi
+\chapter{光学谐振腔}
+\begin{exe}
+    试把从光学谐振腔 ($R\sim 0.99$) 可得到的典型 $Q$ 值与微波谐振腔的 $Q$ 进行比较.
+\end{exe}
+\begin{pf}
+
+\end{pf}
+
+\begin{exe}
+    设计一个谐振腔, $R_1=20$ 厘米, $R_2=-32$ 厘米, $l=16$ 厘米, $\lambda=10^{-4}$ 厘米.\\
+    试求
+    \begin{itemize}
+        \item[(a)] 最小光斑尺寸 $\omega_0$;
+        \item[(b)] 最小光斑的位置;
+        \item[(c)] 镜面光斑尺寸 $\omega_1$, $\omega_2$;
+        \item[(d)] $\omega_0$, $\omega_1$ 和 $\omega_2$ 分别与共焦腔 ($R_1=-R_2=l$) 相应值的比.
+    \end{itemize}
+\end{exe}
+\begin{sol}
+
+\end{sol}
+
+\begin{exe}
+    考虑一共焦腔, $l=16$ 厘米, $\lambda=10^{-4}$ 厘米, 反射率 $R_1=R_2=0.995$. 利用图 7.7, 选择反射镜的口径, 使第一个高阶模式 (TE$_{01}$) 的总损耗超过 $3\%$. 对于选择的口径, 基模损耗有多少? 为了抑制高阶横模的振荡, 需要多大的口径?
+\end{exe}
+\begin{sol}
+    
+\end{sol}
+
+\begin{exe}
+    证明稳区图 7.4 为什么不是下列的图解表示.
+    \[
+        0\leq\left(1-\frac{l}{R_1}\right)\left(1-\frac{l}{R_2}\right)\leq 1
+    \]
+    指出图 7.1 的 8 种谐振腔在稳区图上的位置.
+\end{exe}
+\begin{sol}
+    
+\end{sol}
+
+\begin{exe}
+    按照图 7.4 (或者式 (7.2-2)), 在 $\abs{R_2}=R_1$, $R_2<0$ 时, 也就是交替排列的同样会聚和发散的两个透镜, 可以得到稳定模式. 从物理上解释为什么这会导致净聚焦.\\
+    提示: 考虑光线通过两种透镜时离开轴线时的距离.
+\end{exe}
+\begin{sol}
+    
+\end{sol}
+
+\begin{exe}
+    设对称共焦腔的反射镜间距为 $l$, 曲率半径为 $R$, 利用 $ABCD$ 定理推导模式的特性 (最小光斑尺寸 $\omega_0$ 和镜面光斑尺寸 $\omega_{1,2}$).\\
+    提示: 证明在反射镜面处位相波阵面的曲率半径 (也是自洽光束解) 等于反射镜的曲率半径.
+\end{exe}
+\begin{sol}
+    
+\end{sol}
+
+\begin{exe}
+    若用两个反射镜 (也就是在 $z_1$ 和 $z_2$ 处分别方两个曲率半径等于 $R(z_1)$ 和 $R(z_2)$ 的反射镜) ``代替''高斯传播光束的任意两个位相波阵面, 证明由此构成的光学谐振腔是稳定腔.
+\end{exe}
+\begin{pf}
+    
+\end{pf}
+
+\begin{exe}
+    设光学谐振腔由间距为 $l$、曲率半径为 $R$ 的两个相同的反射镜和放在中间的一薄透镜 (焦距为 $f$) 所构成, 推导模式的稳定条件.
+\end{exe}
+\begin{sol}
+    
+\end{sol}
+
+\begin{exe}
+    证明由自洽场光束参量 $q$ 的表达式 (7.2-5) 可导出光束在镜面处的曲率半径, 它分别等于反射镜的曲率半径, 即 $R(z_2)=R_2$, $R(z_1)=R_1$.
+\end{exe}
+\begin{pf}
+    
+\end{pf}
+
+\begin{exe}
+    证明光束往返一次后, 复光束参量 (它的稳态值由式 (7.2-5) 决定) 的微扰 $\Delta(1/q)$ 变为 $\delta(1/q)=e^{\mp i2\theta}\Delta(1/q)$, 其中 $\cos\theta=\frac{1}{2}(A+D)\cdot\Delta(1/q)$ 与稳定性无关, $[\delta(1/q)]=\abs{\Delta(1/q)}$ 在稳定光束中满足式 (7.2-6).
+\end{exe}
+\begin{pf}
+    
+\end{pf}
+\ifx\allfiles\undefined
+\end{document}
+\fi
