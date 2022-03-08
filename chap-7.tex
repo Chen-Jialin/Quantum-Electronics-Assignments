@@ -10,7 +10,7 @@
     试把从光学谐振腔 ($R\sim 0.99$) 可得到的典型 $Q$ 值与微波谐振腔的 $Q$ 进行比较.
 \end{exe}
 \begin{pf}
-
+    
 \end{pf}
 
 \begin{exe}
@@ -24,7 +24,44 @@
     \end{itemize}
 \end{exe}
 \begin{sol}
-
+    为保证各物理量符号的规范, 不妨重设 $R_1=-20$ cm, $R_2=32$ cm.
+    \begin{itemize}
+        \item[(a)] 瑞利距离的平方为
+        \begin{align}
+            z_0^2=\frac{l(R_2-R_1-l)(l+R_1)(l-R_2)}{(2l+R_1-R_2)^2}=92.16\,\text{cm}^2.
+        \end{align}
+        最小光斑尺寸为
+        \begin{align}
+            \omega_0=\sqrt{\frac{\lambda z_0}{n\pi}}=0.0175\,\text{cm}=175\,\mu\text{m}.
+        \end{align}
+        \item[(b)] 最小光斑与 1 号镜面的距离为
+        \begin{align}
+            \abs{z_1}=\abs{\frac{1}{2}\left[R_1\pm\sqrt{R_1^2-4z_0^2}\right]}=7.2\,\text{cm 或 }12.8\,\text{cm}.
+        \end{align}
+        \item[(c)] 镜面光斑尺寸分别为
+        \begin{align}
+            \omega_1=&\omega_0\sqrt{1+\left(\frac{z_1}{z_0}\right)^2}=0.0219\,\text{cm 或 }0.0291\,\text{cm}=219\,\mu\text{m 或 }0.291\,\mu\text{m},\\
+            \omega_2=&\omega_0\sqrt{1+\left(\frac{z_2}{z_0}\right)^2}=\omega_0\sqrt{1+\left(\frac{l-z_1}{z_0}\right)^2}=0.0237\,\text{cm 或 }0.0184\,\text{cm}=237\,\mu\text{m 或 }184\,\mu\text{m}.
+        \end{align}
+        \item[(d)] 对对称共焦腔, 瑞利距离的平方为
+        \begin{align}
+            z_{0,\text{confocal}}^2=\frac{l^2}{4}=64\,\text{cm}^2,
+        \end{align}
+        束腰半径为
+        \begin{align}
+            \omega_{0,\text{confocal}}=\sqrt{\frac{\lambda z_0}{\pi n}}=0.0160\,\text{cm}=160\,\mu\text{m},
+        \end{align}
+        镜面光斑半径为
+        \begin{align}
+            \omega_{1,2,\text{confocal}}=\sqrt{2}\omega_{0,\text{confocal}}=0.0226\,\text{cm}=226\,\mu\text{m}.
+        \end{align}
+        题设中谐振腔 $\omega_0$、$\omega_1$ 和 $\omega_2$ 与共焦腔相应值的比分别为
+        \begin{align}
+            \frac{\omega_0}{\omega_{0,\text{confocal}}}=&1.1,\\
+            \frac{\omega_1}{\omega_{1,\text{confocal}}}=&0.97\text{ 或 }1.3,\\
+            \frac{\omega_2}{\omega_{2,\text{confocal}}}=&1.05\text{ 或 }0.83.
+        \end{align}
+    \end{itemize}
 \end{sol}
 
 \begin{exe}
