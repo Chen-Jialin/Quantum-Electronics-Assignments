@@ -3,7 +3,7 @@
 \ifx\allfiles\undefined
 \documentclass{note}
 \begin{document}
-\setcounter{chapter}{7}
+\setcounter{chapter}{6}
 \fi
 \chapter{光学谐振腔}
 \begin{exe}
@@ -81,14 +81,36 @@
 \end{sol}
 
 \begin{exe}
-    证明稳区图 7.4 为什么不是下列的图解表示.
+    证明稳区图 7.4 为什么是下列条件的图解表示.
     \[
         0\leq\left(1-\frac{l}{R_1}\right)\left(1-\frac{l}{R_2}\right)\leq 1
     \]
     指出图 7.1 的 8 种谐振腔在稳区图上的位置.
 \end{exe}
 \begin{sol}
-    
+    由上述稳定条件式, 当 $\frac{l}{R_1}\geq 1$, $\frac{l}{R_2}\geq 1$ 时,
+    \begin{align}
+        \left(\frac{l}{R_1}-1\right)\left(\frac{l}{R_2}\right)\leq 1,
+    \end{align}
+    构成稳定区的右上部分,
+    当 $\frac{l}{R_1}\leq 1$, $\frac{l}{R_2}\leq 1$ 时,
+    \begin{align}
+        \left(\frac{l}{R_1}-1\right)\left(\frac{l}{R_2}-1\right)\leq 1,
+    \end{align}
+    构成稳定区的左下部分,
+    故图 7.4 是该稳定条件的图解表示.
+
+    图 7.1 中
+    \begin{itemize}
+        \item 平面平行腔对应稳区图中的点 $(0,0)$,
+        \item 第一行第二个腔对应 $0\leq\frac{l}{R_1}\leq 1$, $0\leq\frac{l}{R_2}\leq 1$ 的正方形区域,
+        \item 第二行第一个腔对应 $\frac{l}{R_2}\geq\frac{l}{R_1}\geq 1$, $\left(\frac{l}{R_1}-1\right)\left(\frac{l}{R_2}-1\right)\leq 1$ 的区域,
+        \item 第二行第二个腔对应 $\frac{l}{R_1}\leq 0$, $0\leq\frac{l}{R_2}\leq 1$, $\left(\frac{l}{R_1}-1\right)\left(\frac{l}{R_2}-1\right)\leq 1$ 的区域,
+        \item 共焦腔对应点 $(1,1)$,
+        \item 共心腔对应点 $(2,2)$,
+        \item 第四行第一个高损耗腔对应右上的非稳区,
+        \item 第四行第二个高损耗腔对应右上的非稳区.
+    \end{itemize}
 \end{sol}
 
 \begin{exe}
