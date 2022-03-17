@@ -165,7 +165,7 @@
     \begin{align}
         q=\frac{Aq+B}{Cq+D}.
     \end{align}
-    对称谐振腔可等价为焦距为 $R/2$ 和 $R/2$ 的透镜相互间隔距离 $l$ 交替排列而成二元透镜系统, 故
+    对称谐振腔可等价为焦距为 $R/2$ 和 $R/2$ 的透镜相互间隔距离 $l$ 交替排列而成的二元透镜系统, 故光线矩阵
     \begin{align}
         \begin{bmatrix}
             A&B\\
@@ -226,7 +226,37 @@
     设光学谐振腔由间距为 $l$、曲率半径为 $R$ 的两个相同的反射镜和放在中间的一薄透镜 (焦距为 $f$) 所构成, 推导模式的稳定条件.
 \end{exe}
 \begin{sol}
-    
+    自洽场条件要求腔中的光场经过往返一周后能再自现. 该光学谐振腔等效于由焦距为 $\frac{R}{2}$ 和 $f$ 的透镜相互间隔距离 $\frac{l}{2}$ 交替排列而成的二元透镜系统.
+    % 设反射镜面处光束的复参量为 $q$. 利用 ABCD 定律,
+    % \begin{align}
+    %     q=\frac{Aq+B}{Cq+D}.
+    % \end{align}
+    % 其中
+    % \begin{align}
+    %     \begin{bmatrix}
+    %         A&B\\
+    %         C&D
+    %     \end{bmatrix}=\begin{bmatrix}
+    %         1&0\\
+    %         -\frac{2}{R}&1
+    %     \end{bmatrix}\begin{bmatrix}
+    %         1&\frac{l}{2}\\
+    %         0&1
+    %     \end{bmatrix}\begin{bmatrix}
+    %         1&0\\
+    %         -\frac{1}{f}&1
+    %     \end{bmatrix}\begin{bmatrix}
+    %         1&\frac{l}{2}\\
+    %         0&1
+    %     \end{bmatrix}=\begin{bmatrix}
+    %         1-\frac{l}{2f}&l-\frac{l^2}{4f}\\
+    %         -\frac{2}{R}+\frac{l}{Rf}-\frac{1}{f}&-\frac{l}{R}+\left(-\frac{l}{R}+1\right)\left(-\frac{l}{2f}+1\right)
+    %     \end{bmatrix}.
+    % \end{align}
+    与 7.2 节中的推导同理, 将式 (6.8-5) 中的 $f_1$ 替换为 $f$, $f_2$ 替换为 $R/2$, $l$ 替换为 $\frac{l}{2}$, 则得该光学谐振腔的稳定条件为
+    \begin{align}
+        0\leq\left(1-\frac{l}{4f}\right)\left(1-\frac{l}{2R}\right)\leq 1.
+    \end{align}
 \end{sol}
 
 \begin{exe}
