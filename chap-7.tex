@@ -118,7 +118,42 @@
     提示: 考虑光线通过两种透镜时离开轴线时的距离.
 \end{exe}
 \begin{sol}
-    
+    当 $R_1\geq l$ 时,
+    \begin{align}
+        0\leq\left(1-\frac{l}{R_1}\right)\left(1-\frac{l}{R_2}\right)=1-\left(\frac{l}{R_1}\right)^2\leq 1,
+    \end{align}
+    此时可以得到稳定模式.
+
+    该交替排列的同样会聚和发散的二元周期透镜系统的光线矩阵为
+    \begin{align}
+        \begin{bmatrix}
+            1-\frac{2l}{R_1}&l\left(2-\frac{2l}{R_1}\right)\\
+            -\left[\frac{2}{-R_1}+\frac{2}{R_1}\left(1-\frac{2l}{-R_1}\right)\right]&-\left[\frac{2l}{-R_1}-\left(1-\frac{2l}{-R_1}\right)\left(1-\frac{2l}{R_1}\right)\right]
+        \end{bmatrix}
+    \end{align}
+    高 $h$ 的平行光轴的光线, 在透镜 1 处入射, 在透镜 2 处出射的光线为
+    \begin{align}
+        \notag\begin{bmatrix}
+            r\\
+            r'
+        \end{bmatrix}=&\begin{bmatrix}
+            1-\frac{2l}{R_1}&l\left(2-\frac{2l}{R_1}\right)\\
+            -\left[\frac{2}{-R_1}+\frac{2}{R_1}\left(1-\frac{2l}{-R_1}\right)\right]&-\left[\frac{2l}{-R_1}-\left(1-\frac{2l}{-R_1}\right)\left(1-\frac{2l}{R_1}\right)\right]
+        \end{bmatrix}\begin{bmatrix}
+            h\\
+            0
+        \end{bmatrix}\\
+        =&\begin{bmatrix}
+            h\left(1-\frac{2l}{R_1}\right)\\
+            -\frac{4l}{R_1^2}
+        \end{bmatrix}.
+    \end{align}
+    故光线最终将在距透镜 2
+    \begin{align}
+        \abs{\frac{h\left(1-\frac{2l}{R_1}\right)}{-\frac{4l}{R_1^2}}}=\frac{h(R_1-2l)}{4l}
+    \end{align}
+    处于光轴相交, 故这有可能导致净聚焦.
+    % 存疑
 \end{sol}
 
 \begin{exe}
