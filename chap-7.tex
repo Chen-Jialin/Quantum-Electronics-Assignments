@@ -150,18 +150,59 @@
     \end{align}
     故光线最终将在距透镜 2
     \begin{align}
-        \abs{\frac{h\left(1-\frac{2l}{R_1}\right)}{-\frac{4l}{R_1^2}}}=\frac{h(R_1-2l)}{4l}
+        -\frac{h\left(1-\frac{2l}{R_1}\right)}{-\frac{4l}{R_1^2}}=-\frac{h(R_1-2l)}{4l}
     \end{align}
     处于光轴相交, 故这有可能导致净聚焦.
     % 存疑
 \end{sol}
 
 \begin{exe}
-    设对称共焦腔的反射镜间距为 $l$, 曲率半径为 $R$, 利用 $ABCD$ 定理推导模式的特性 (最小光斑尺寸 $\omega_0$ 和镜面光斑尺寸 $\omega_{1,2}$).\\
+    设对称谐振腔的反射镜间距为 $l$, 曲率半径为 $R$, 利用 $ABCD$ 定律推导模式的特性 (最小光斑尺寸 $\omega_0$ 和镜面光斑尺寸 $\omega_{1,2}$).\\
     提示: 证明在反射镜面处位相波阵面的曲率半径 (也是自洽光束解) 等于反射镜的曲率半径.
 \end{exe}
 \begin{sol}
-    
+    自洽场条件要求腔中的光场经过往返一周后能自再现. 设反射镜面处光束的复参量为 $q$. 利用 ABCD 定律,
+    \begin{align}
+        q=\frac{Aq+B}{Cq+D}.
+    \end{align}
+    对称谐振腔可等价为焦距为 $R/2$ 和 $R/2$ 的透镜相互间隔距离 $l$ 交替排列而成二元透镜系统, 故
+    \begin{align}
+        \begin{bmatrix}
+            A&B\\
+            C&D
+        \end{bmatrix}=\begin{bmatrix}
+            1&0\\
+            -\frac{2}{R}&1
+        \end{bmatrix}\begin{bmatrix}
+            1&l\\
+            0&1
+        \end{bmatrix}\begin{bmatrix}
+            1&0\\
+            -\frac{2}{R}&1
+        \end{bmatrix}\begin{bmatrix}
+            1&l\\
+            0&1
+        \end{bmatrix}=\begin{bmatrix}
+            1-\frac{2l}{R}&2l\left(1-\frac{l}{R}\right)\\
+            \frac{4}{R}\left(\frac{l}{R}-1\right)&-\frac{2l}{R}+\left(-\frac{2l}{R}+1\right)^2
+        \end{bmatrix}.
+    \end{align}
+    反射镜面处光斑尺寸为
+    \begin{align}
+        \omega_{1,2}=\left(\frac{\lambda}{\pi n}\right)^{1/2}\frac{\abs{B}^{1/2}}{\left[1-\left(\frac{D+A}{2}\right)^2\right]^{1/4}}=\left(\frac{\lambda}{\pi n}\right)^{1/2}\left(\frac{lR^2}{2R-l}\right)^{1/4},
+    \end{align}
+    波阵面曲率半径
+    \begin{align}
+        \frac{2B}{D-A}=-R,
+    \end{align}
+    即在反射镜面处位相波阵面的曲率半径 (即自洽光束解) 等于反射镜的曲率半径, 故对称谐振腔中的稳定高斯光束的束腰位于腔心, 从而
+    \begin{align}
+        R=\frac{l}{2}\left[1+\left(\frac{\pi\omega_0^2n}{\lambda\frac{l}{2}}\right)^2\right],
+    \end{align}
+    最小光斑尺寸
+    \begin{align}
+        \omega_0=\frac{\lambda l}{2\pi n}\sqrt{\frac{2R}{l}-1}.
+    \end{align}
 \end{sol}
 
 \begin{exe}
