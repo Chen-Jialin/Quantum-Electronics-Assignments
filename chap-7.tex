@@ -209,7 +209,17 @@
     若用两个反射镜 (也就是在 $z_1$ 和 $z_2$ 处分别方两个曲率半径等于 $R(z_1)$ 和 $R(z_2)$ 的反射镜) ``代替''高斯传播光束的任意两个位相波阵面, 证明由此构成的光学谐振腔是稳定腔.
 \end{exe}
 \begin{pf}
-    
+    设高斯光束的束腰半径为 $\omega_0$, 则 $z_1$ 和 $z_2$ 处的波阵面曲率半径分别为
+    \begin{align}
+        R(z_1)=&z_1\left(1+\frac{z_0^2}{z_1^2}\right),\\
+        R(z_2)=&z_2\left(1+\frac{z_0^2}{z_2^2}\right),
+    \end{align}
+    其中 $z_0=\frac{\pi\omega_0^2n}{\lambda}$.
+    该两个反射镜构成的光学谐振腔满足稳定条件:
+    \begin{align}
+        0\leq\left(1-\frac{z_2-z_1}{R(z_1)}\right)\left(1-\frac{z_2-z_1}{R(z_2)}\right)=\frac{(z_0^2-z_1z_2)^2}{(z_0^2+z_1^2)(z_0^2+z_2^2)}\leq 1,
+    \end{align}
+    故由此构成的光学谐振腔为稳定腔.
 \end{pf}
 
 \begin{exe}
