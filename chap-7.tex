@@ -263,7 +263,23 @@
     证明由自洽场光束参量 $q$ 的表达式 (7.2-5) 可导出光束在镜面处的曲率半径, 它分别等于反射镜的曲率半径, 即 $R(z_2)=R_2$, $R(z_1)=R_1$.
 \end{exe}
 \begin{pf}
-    
+    式 (7.2-5)
+    \begin{align}
+        \frac{1}{q}=\frac{D-A}{2B}\pm i\frac{\sqrt{1-\left(\frac{D+A}{2}\right)^2}}{B}\equiv\frac{1}{R(z_2)}-i\frac{\lambda}{\pi\omega_2^2n},
+    \end{align}
+    其中
+    \begin{align}
+        A=&1-\frac{2l}{R_1},\\
+        B=&l\left(2-\frac{2l}{R_1}\right),\\
+        C=&-\left[\frac{2}{R_2}+\frac{2}{R_1}\left(1-\frac{2l}{R_1}\right)\right],\\
+        D=&-\left[\frac{2l}{R_2}-\left(1-\frac{2l}{R_1}\right)\left(1-\frac{2l}{R_2}\right)\right].
+    \end{align}
+    故
+    \begin{gather}
+        \frac{1}{q}=\frac{\frac{l^2}{R_2}\left(-1+\frac{l}{R_1}\right)\pm i\sqrt{\left(1-\frac{l}{R_1}\right)\left(1-\frac{l}{R_2}\right)\left(-\frac{l^2}{R_1R_2}+\frac{l}{R_1}+\frac{l}{R_2}\right)}}{l\left(1-\frac{l}{R_1}\right)},\\
+        \Longrightarrow R(z_2)=R_2.
+    \end{gather}
+    同理可证 $R(z_1)=R_1$, 故自洽场光束在镜面处的曲率半径等于反射镜的曲率半径.
 \end{pf}
 
 \begin{exe}
