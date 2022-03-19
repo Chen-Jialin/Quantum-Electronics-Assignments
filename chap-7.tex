@@ -283,10 +283,34 @@
 \end{pf}
 
 \begin{exe}
-    证明光束往返一次后, 复光束参量 (它的稳态值由式 (7.2-5) 决定) 的微扰 $\Delta(1/q)$ 变为 $\delta(1/q)=e^{\mp i2\theta}\Delta(1/q)$, 其中 $\cos\theta=\frac{1}{2}(A+D)\cdot\Delta(1/q)$ 与稳定性无关, $[\delta(1/q)]=\abs{\Delta(1/q)}$ 在稳定光束中满足式 (7.2-6).
+    证明光束往返一次后, 复光束参量 (它的稳态值由式 (7.2-5) 决定) 的微扰 $\Delta(1/q)$ 变为 $\delta(1/q)=e^{\mp i2\theta}\Delta(1/q)$, 其中 $\cos\theta=\frac{1}{2}(A+D)\cdot\Delta(1/q)$ 与稳定性无关, $\abs{\delta(1/q)}=\abs{\Delta(1/q)}$ 在稳定光束中满足式 (7.2-6).
 \end{exe}
 \begin{pf}
-    
+    由式 (7.2-5), 稳态下光束的复参量
+    \begin{align}
+        \frac{1}{q}=\frac{D-A}{2B}\pm i\frac{\sqrt{1-\left(\frac{D+A}{2}\right)^2}}{B}.
+    \end{align}
+    利用 ABCD 定律, 参量受微扰 $\Delta(1/q)$ 的光束往返一次后参量变为
+    \begin{align}
+        \notag\frac{1}{q}+\delta\left(\frac{1}{q}\right)=&\frac{D\left[\frac{1}{q}+\Delta\left(\frac{1}{q}\right)\right]+C}{B\left[\frac{1}{q}+\Delta\left(\frac{1}{q}\right)\right]+A}=\frac{D\left[\frac{1}{q}+\Delta\left(\frac{1}{q}\right)\right]+C}{B\frac{1}{q}+A}\left[1-\frac{B\Delta\left(\frac{1}{q}\right)}{B\frac{1}{q}+A}\right]\\
+        =&\frac{D\frac{1}{q}+C}{B\frac{1}{q}+A}+\frac{D\Delta\left(\frac{1}{q}\right)}{B\frac{1}{q}+A}-\frac{D\frac{1}{q}+C}{B\frac{1}{q}+A}\frac{B\Delta\left(\frac{1}{q}\right)}{B\frac{1}{q}+A}=\frac{1}{q}+\frac{D\Delta\left(\frac{1}{q}\right)}{B\frac{1}{q}+A}-\frac{1}{q}\frac{B\Delta\left(\frac{1}{q}\right)}{B\frac{1}{q}+A},
+    \end{align}
+    从而参量的微扰变为
+    \begin{align}
+        \delta\left(\frac{1}{q}\right)=\frac{D-B\frac{1}{q}}{B\frac{1}{q}+A}\Delta\frac{1}{q}=\frac{\frac{D+A}{2}\mp i\sqrt{1-\left(\frac{D+A}{2}\right)^2}}{\frac{D+A}{2}\pm i\sqrt{1-\left(\frac{D+A}{2}\right)^2}}\Delta\left(\frac{1}{q}\right)=\frac{\frac{D+A}{2}\mp i\sqrt{1-\left(\frac{D+A}{2}\right)^2}}{\left(\frac{D+A}{2}\right)^2+\left[1-\left(\frac{D+A}{2}\right)^2\right]}=e^{\mp i2\theta}\Delta\left(\frac{1}{q}\right),
+    \end{align}
+    其中
+    \begin{align}
+        \tan 2\theta=\frac{\sqrt{1-\left(\frac{D+A}{2}\right)^2}}{\frac{D+A}{2}},
+    \end{align}
+    即
+    \begin{align}
+        \cos 2\theta=\frac{D+A}{2}.
+    \end{align}
+    当 $\abs{\frac{D+A}{2}}\leq 1$, 即满足式 (7.2-6) 时, $2\theta$ 为实数, 从而
+    \begin{align}
+        \abs{\delta\left(\frac{1}{q}\right)}=\abs{\Delta\left(\frac{1}{q}\right)}.
+    \end{align}
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
