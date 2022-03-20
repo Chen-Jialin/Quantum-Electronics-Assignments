@@ -18,7 +18,41 @@
     式中, $n=$ 这个模式的量子数.
 \end{exe}
 \begin{pf}
-    
+    由式 (8.3-4), 系统由初态 $\lvert 2,n_l\rangle$ 跃迁到终态 $\lvert 1,n_{l+1}\rangle$ 的速率为
+    \begin{align}
+        W_{21}'=\frac{2\pi e^2\omega_l}{V\varepsilon}\abs{\langle 1,n_l+1\rvert ya_l^{\dagger}\lvert 2,n_l\rangle}^2\sin^2(k_lz)\delta(E_2-E_1-\hbar\omega_l)=\frac{2\pi e^2\omega_ly_{12}^2}{V\varepsilon}(n_l+1)\sin^2(k_lz)\delta(E_2-E_1-\hbar\omega_l),
+    \end{align}
+    其中 $y_{12}^2=\abs{\langle 1\rvert y\lvert 2\rangle}^2$.
+    由该模式的真空涨落引发的自发跃迁速率为
+    \begin{align}
+        W_{21,\text{spontaneous}}'=\frac{2\pi e^2\omega_l}{V\varepsilon}\abs{\langle 1,1\rvert ya^{\dagger}\lvert 2,0\rangle}^2\sin^2(k_lz)\delta(E_2-E_1-\hbar\omega_l)=\frac{2\pi e^2\omega_ly_{12}^2}{V\varepsilon}n_l\sin^2(k_lz)\delta(E_2-E_1-\hbar\omega_l).
+    \end{align}
+    由该模式引发的感应 (受激) 发射的跃迁速率为
+    \begin{align}
+        W_{21,\text{induced}}'=W_{21}'-W_{21,\text{spontaneous}}'=\frac{2\pi e^2\omega_ly_{12}^2}{V\varepsilon}n_l\sin^2(k_lz)\delta(E_2-E_1-\hbar\omega).
+    \end{align}
+    因此
+    \begin{align}
+        \frac{\text{每个模的}W_{\text{感应}}}{\text{每个模的}W_{\text{自发}}}=n,
+    \end{align}
+    其中 $n=$ 这个模式的量子数.
+
+    频率为 $\omega_l$ 的模式的真空涨落均可引发自发跃迁, 故自发发射系数为上述感应发射的跃迁速率与模式密度乘积的积分
+    \begin{align}
+        \notag A=&\int_0^{\infty}W_{21,\text{spontaneous}}'\rho(\nu_l)\,\mathrm{d}\nu_l=\int_0^{\infty}\frac{2\pi e^2\omega_ly_{12}^2}{V\varepsilon}\sin^2(k_lz)\delta(E_2-E_1-\hbar\omega_l)\frac{8\pi\nu_l^2n^3V}{c^3}\,\mathrm{d}\nu_l\\
+        =&\frac{2\pi e^2\omega_ly_{12}^2}{V\varepsilon}\sin^2(k_lz)\frac{8\pi\nu_l^2n^3V}{hc^3}.
+    \end{align}
+    其中 $g_2$ 为
+    频率为 $\omega_l$ 的模式中仅有激光器谐振腔限定的某一确定的传播方向和偏振的模式可引发感应跃迁, 故受激发射系数为
+    \begin{align}
+        B_{21}=\frac{V\int_0^{\infty}W_{12,\text{induced}}'\,\mathrm{d}\nu_l}{\rho(\nu)}=\frac{\frac{2\pi e^2\omega_ly_{12}^2}{V\varepsilon}n_l\sin^2(k_lz)\frac{V}{h}}{n_lh\nu_l}.
+    \end{align}
+    因此
+    \begin{align}
+        \frac{A}{B_{21}}=\frac{8\pi h\nu^3n^3}{c^3},
+    \end{align}
+    与关系式 (8.5-10) 一致.\\
+    (由于自发发射和受激发射的原子初能级和末能级相同, 故此处忽略能级简并的问题.)
 \end{pf}
 
 \begin{exe}
