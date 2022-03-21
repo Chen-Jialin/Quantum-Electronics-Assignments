@@ -3,7 +3,7 @@
 \ifx\allfiles\undefined
 \documentclass{note}
 \begin{document}
-\setcounter{chapter}{8}
+\setcounter{chapter}{7}
 \fi
 \chapter{辐射场与原子系统的相互作用}
 \begin{exe}
@@ -56,14 +56,14 @@
 \end{pf}
 
 \begin{exe}
-    确定频率为 $\nu_0=3\times 10^{14}$ 赫兹跃迁的峰值吸收系数 $d(\nu_0)$, 其中 $N_2\approxeq 0$, $N_1=10^{18}$ 厘米 ${}^{-3}$, 高斯吸收曲线的全宽度为 $400$ 厘米 ${}^{-1}$, $t_{\text{自发}}=10^{-4}$ 秒. 定义光学密度为
+    确定频率为 $\nu_0=3\times 10^{14}$ 赫兹跃迁的峰值吸收系数 $d(\nu_0)$, 其中 $N_2\approxeq 0$, $N_1=10^{18}$ 厘米${}^{-3}$, 高斯吸收曲线的全宽度为 $400$ 厘米 ${}^{-1}$, $t_{\text{自发}}=10^{-4}$ 秒. 定义光学密度为
     \[
         \log_{10}\frac{I_{\text{入}}}{I_{\text{出}}}
     \]
     式中 $I$ 表示强度. 对于 $1$ 厘米程长的介质, 在频率 $\nu_0$ 处的光学密度是什么? 在什么温度时, 黑体辐射的感应跃迁速率等于自发发射速率?
 \end{exe}
 \begin{sol}
-
+    
 \end{sol}
 
 \begin{exe}
@@ -88,7 +88,35 @@
     推导式 (8.1-15).
 \end{exe}
 \begin{pf}
-    
+    稳态下, 式 (8.1-12) 和式 (8.1-13) 可化为
+    \begin{align}
+        \label{8.5-1}
+        \frac{\mathrm{d}\sigma_{21}}{\mathrm{d}t}=&i(\omega-\omega_0)\sigma_{21}+\frac{i\mu E_0}{2\hbar}(\rho_{11}-\rho_{22})-\frac{\sigma_{21}}{T_2}=0,\\
+        \label{8.5-2}
+        \frac{\mathrm{d}}{\mathrm{d}t}(\rho_{11}-\rho_{22})=&\frac{i\mu E_0}{\hbar}(\sigma_{21}-\sigma_{21}^*)-\frac{(\rho_{11}-\rho_{22})-(\rho_{11}-\rho_{22})_0}{\tau}=0.
+    \end{align}
+    将式 \eqref{8.5-1} 与其复共轭相加和相减得
+    \begin{align}
+        (\omega-\omega_0)\im\sigma_{21}-\frac{\re\sigma_{21}}{T_2}=&0,\\
+        i(\omega-\omega_0)\re\sigma_{21}+\frac{i\mu E_0}{2\hbar}(\rho_{11}-\rho_{22})-\frac{i\im\sigma_{21}}{T_2}=&0,
+    \end{align}
+    进而解得
+    \begin{align}
+        \label{8.5-3}
+        \im\sigma_{21}=&\frac{\frac{\mu E_0}{2\hbar}T_2(\rho_{11}-\rho_{22})}{(\omega-\omega_0)^2T_2^2+1},\\
+        \label{8.5-4}
+        \re\sigma_{21}=&-\frac{\frac{\mu E_0}{2\hbar}(\omega-\omega_0)T_2^2(\rho_{11}-\rho_{22})}{(\omega-\omega_0)^2T_2^2+1}.
+    \end{align}
+    将式 \eqref{8.5-3} 代入式 \eqref{8.5-2} 中得
+    \begin{align}
+        \rho_{11}-\rho_{22}=(\rho_{11}-\rho_{22})_0\frac{1+(\omega-\omega_0)^2T_2^2}{1+(\omega-\omega_0)^2T_2^2+4\Omega^2T_2\tau},
+    \end{align}
+    其中 $\Omega=\frac{\mu E_0}{2\hbar}$.
+    再将上式回代入式 \eqref{8.5-3} 和 \eqref{8.5-4} 中得
+    \begin{align}
+        \im\sigma_{21}=&\frac{\Omega T_2(\rho_{11}-\rho_{22})_0}{1+(\omega-\omega_0)^2T_2^2+4\Omega^2T_2\tau},\\
+        \re\sigma_{21}=&\frac{(\omega-\omega_0)T_2^2\Omega(\rho_{11}-\rho_{22})_0}{1+(\omega-\omega_0)^2T_2^2+4\Omega^2T_2\tau}.
+    \end{align}
 \end{pf}
 
 \begin{exe}
