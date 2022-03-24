@@ -134,7 +134,24 @@
     证明在饱和可忽略的极限情况下 ($\Omega=0$), 式 (8.1-19) 中的 $\chi'(\omega)$ 和 $\chi''(\omega)$ 遵守 K-K 关系.
 \end{exe}
 \begin{pf}
-    
+    在饱和可忽略的极限情况下 ($\Omega=0$), 式 (8.1-19) 可化为
+    \begin{align}
+        \chi''(\omega)=&\frac{\mu^2T_2\Delta N_0}{\varepsilon_0\hbar}\frac{1}{1+(\omega-\omega_0)^2T_2^2},\\
+        \chi'(\omega)=&\frac{\mu^2T_2\Delta N_0}{\varepsilon_0\hbar}\frac{(\omega-\omega_0)T_2}{1+(\omega-\omega_0)^2T_2^2}.
+    \end{align}
+    此时有
+    \begin{align}
+        \notag&\frac{1}{\pi}\text{P.V.}\int_{-\infty}^{+\infty}\frac{\chi''(\omega')}{\omega'-\omega}\,\mathrm{d}\omega'=\frac{\mu^2T_2\Delta N_0}{\pi\varepsilon_0\hbar}\lim_{\Omega\rightarrow\infty}\int_{-\Omega}^{+\Omega}\frac{1}{1+(\omega'-\omega_0)^2T_2^2}\frac{1}{\omega'-\omega}\,\mathrm{d}\omega'\\
+        \notag=&\frac{\mu^2T_2\Delta N_0}{\pi\varepsilon_0\hbar}\lim_{\Omega\rightarrow\infty}\left.\frac{-2(\omega-\omega_0)T_2\{\arctan[(\omega'-\omega_0)T_2]+\arctan[(\omega'+\omega_0)T_2]\}+2\ln\frac{-\omega+\omega'}{-\omega-\omega'}+\ln\frac{1+(\omega'+\omega_0)^2T_2^2}{1+(\omega'-\omega_0)^2T_2^2}}{2[1+(\omega-\omega_0)T_2^2]}\right|_{\omega'=-\Omega}^{+\Omega}\\
+        =&-\frac{\mu^2T_2\Delta N_0}{\varepsilon_0\hbar}\frac{2(\omega-\omega_0)T_2^2}{1+(\omega-\omega_0)^2T_2^2}=-2\chi'(\omega),
+    \end{align}
+    及
+    \begin{align}
+        \notag&-\frac{1}{\pi}\text{P.V.}\int_{-\infty}^{+\infty}\frac{\chi'(\omega')}{\omega'-\omega}\,\mathrm{d}\omega'=-\frac{\mu^2T_2\Delta N_0}{\pi\varepsilon_0\hbar}\lim_{\Omega\rightarrow\infty}\int_{-\Omega}^{\Omega}\frac{(\omega'-\omega_0)T_2^2}{1+(\omega-\omega_0)^2T_2^2}\frac{1}{\omega'-\omega}\,\mathrm{d}\omega'\\
+        \notag=&-\frac{\mu^2T_2\Delta N_0}{\pi\varepsilon_0\hbar}\lim_{\Omega\rightarrow\infty}\left.\frac{2\{\arctan[(\omega'-\omega_0)T_2]+\arctan[(\omega'+\omega_0)T_2]\}-(\omega-\omega_0)\left[\ln\frac{-\omega-\omega'}{-\omega+\omega'}+\ln\frac{1+(\omega'-\omega_0)^2T_2^2}{1+(\omega'-\omega_0)^2T_2^2}\right]}{2T_2[1+(\omega-\omega_0)^2T_2^2]}\right|_{\omega'=-\Omega}^{+\Omega}\\
+        =&-\frac{\mu^2T_2\Delta N_0}{\varepsilon_0\hbar}\frac{2}{1+(\omega-\omega_0)^2T_2}=-2\chi''(\omega).
+    \end{align}
+    故式 (8.1-19) 中的 $\chi'(\omega)$ 和 $\chi''(\omega)$ 遵守 K-K 关系.
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
