@@ -92,7 +92,37 @@
     \end{itemize}
 \end{exe}
 \begin{sol}
-    
+    \begin{itemize}
+        \item[(a)] 振子强度是指单个原子或分子在吸收辐射过程中等效的单电子振子个数.
+        \item[(b)] 单电子谐振子在电场 $E(t)$ 中的动力学方程为
+        \begin{align}
+            m\ddot{x}=-eE(t)-\omega_0^2x-2\gamma x,
+        \end{align}
+        若电场 $E(t)=E_0e^{i\omega t}$, 则解得
+        \begin{align}
+            x=-\frac{eE(t)}{m}\frac{1}{(\omega-\omega_0)^2-2i\gamma\omega}.
+        \end{align}
+        同浓度的单电子振子组成的介质的极化率应为
+        \begin{align}
+            \chi_0(\omega)=\frac{N(-e)x}{E(t)}=\frac{e^2N}{\varepsilon_0m}\frac{1}{(\omega-\omega_0)^2-2i\gamma\omega}.
+        \end{align}
+        课本中介质的极化率为
+        \begin{align}
+            \chi(\omega)=\frac{\mu^2T_2\Delta N_0}{\varepsilon_0\hbar}\frac{(\omega_0-\omega)T_2-i}{1+(\omega-\omega_0)^2T_2^2+4\Omega^2T_2\tau}.
+        \end{align}
+        故 8.2 节中描述的跃迁的振子强度即为两者之比
+        \begin{align}
+            f_{21}=\frac{\chi(\omega)}{\chi_0(\omega)}.
+        \end{align}
+        \item[(c)] 自发寿命
+        \begin{align}
+            t_{\text{自发}}=\frac{\varepsilon hc^3}{2n^3\mu^2\omega^3}.
+        \end{align}
+        故有
+        \begin{align}
+            \frac{t_{\text{经典}}}{3t_{\text{自发}}}=\frac{8\pi^2n^3m_e\mu^2\nu}{e^2hc}.
+        \end{align}
+    \end{itemize}% 存疑
 \end{sol}
 
 \begin{exe}
