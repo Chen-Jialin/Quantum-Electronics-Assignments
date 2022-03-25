@@ -56,14 +56,35 @@
 \end{pf}
 
 \begin{exe}
-    确定频率为 $\nu_0=3\times 10^{14}$ 赫兹跃迁的峰值吸收系数 $d(\nu_0)$, 其中 $N_2\approxeq 0$, $N_1=10^{18}$ 厘米${}^{-3}$, 高斯吸收曲线的全宽度为 $400$ 厘米 ${}^{-1}$, $t_{\text{自发}}=10^{-4}$ 秒. 定义光学密度为
+    确定频率为 $\nu_0=3\times 10^{14}$ 赫兹跃迁的峰值吸收系数 $d(\nu_0)$, 其中 $N_2\approxeq 0$, $N_1=10^{18}$ 厘米${}^{-3}$, 高斯吸收曲线的全宽度为 $400$ 厘米${}^{-1}$, $t_{\text{自发}}=10^{-4}$ 秒. 定义光学密度为
     \[
         \log_{10}\frac{I_{\text{入}}}{I_{\text{出}}}
     \]
     式中 $I$ 表示强度. 对于 $1$ 厘米程长的介质, 在频率 $\nu_0$ 处的光学密度是什么? 在什么温度时, 黑体辐射的感应跃迁速率等于自发发射速率?
 \end{exe}
 \begin{sol}
-    
+    假设基态能级和激发态能级的简并度相等, 介质折射率 $n\approx 1$, 峰值 (频率 $\nu_0$ 处的) 吸收系数
+    \begin{align}
+        d(\nu_0)=\frac{(N_1-N_2)\lambda^2}{8\pi n^2t_{\text{自发}}}g(\nu_0)=\frac{(N_1-N_2)\left(\frac{c}{\nu}\right)^2}{8\pi n^2t_{\text{自发}}\Delta\nu}=\frac{(N_1-N_2)\left(\frac{c}{\nu}\right)^2}{8\pi n^2t_{\text{自发}}c\Delta\left(\frac{1}{\lambda}\right)}=33.2\,\text{m}^{-1}.
+    \end{align}
+    频率 $\nu_0$ 处的光学密度为
+    \begin{align}
+        \log_{10}\frac{I_{\text{入}}}{I_{\text{出}}}=\log_{10}e^{d(\nu_0)l}=0.144.
+    \end{align}
+
+    黑体辐射的感应跃迁速率为
+    \begin{align}
+        (W_{21})_i=\frac{c^3\rho(\nu)}{8\pi n^3h\nu^3t_{\text{自发}}}g(\nu_0)=\frac{c^3\frac{8\pi n^3h\nu^3}{c^3}\frac{1}{e^{h\nu/kT}-1}c\Delta\left(\frac{1}{\lambda}\right)}{8\pi n^3h\nu^3t_{\text{自发}}c\Delta\left(\frac{1}{\lambda}\right)}=\frac{1}{e^{h\nu/kT}-1}.
+    \end{align}
+    自发发射速率为
+    \begin{align}
+        W_{\text{自发}}=\frac{1}{t_{\text{自发}}}.
+    \end{align}
+    要使黑体辐射的感应跃迁速率等于自发发射速率,
+    \begin{align}
+        (W_{21})_i=W_{\text{自发}}\Longrightarrow\frac{1}{e^{h\nu/kT}-1}=1,
+    \end{align}
+    故对应的温度为 $T=11413$ K.
 \end{sol}
 
 \begin{exe}
