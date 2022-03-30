@@ -41,7 +41,21 @@
     证明式 (9.2-14) 等效于式 (9.1-10).
 \end{exe}
 \begin{pf}
-    
+    式 (9.2-14):
+    \begin{align}
+        (\omega_l^2-\omega^2)+i\frac{\sigma\omega}{\varepsilon}=\frac{\omega^2\varepsilon_0f}{\varepsilon}(\chi'-i\chi''),
+    \end{align}
+    其中 $\omega=2\pi\nu$ 为激光频率, $\omega_l=2\pi\nu_m$ 为空腔谐振频率 ($\nu_m=\frac{mc}{2nl}+\frac{c}{2\pi nl}\left(\tan^{-1}\frac{z_2}{z_0}-\tan^{-1}\frac{z_1}{z_0}-\frac{\theta_{m1}+\theta_{m2}}{2}\right)$), $\frac{\sigma}{\varepsilon}=\frac{n}{c}\frac{1}{t_c}=\alpha-\frac{1}{l}\ln(r_1r_2)=\gamma_t$ ($t_c$ 为腔寿命, $\alpha$ 为介质非共振损耗常数, $r_1$,$r_2$ 分别为两面反射镜的反射率, 这里将反射镜处的损耗也包含在 $\frac{\sigma}{\varepsilon}$ 中), $\frac{\varepsilon_0}{\varepsilon}=\frac{1}{n^2}$.
+    在完全填充谐振腔且均匀翻转的情况下, $f=1$, 当 $\omega\approx\omega_l$ 时, $\omega_l^2-\omega^2\approx 2\omega(\omega_l-\omega)$, 此时
+    \begin{gather}
+        \nu_m-\nu+i\gamma_t=\frac{\nu}{2n^2}(\chi'-i\chi''),\\
+        \Longrightarrow\nu\left[1+\frac{\chi'}{2n^2}\right]-i\nu\frac{\chi''}{2n^2}-i\frac{\gamma_t}{2}=\nu_m,
+    \end{gather}
+    此即等效于 (9.1-10)
+    \begin{align}
+        e^{-i2[k'l-\tan^{-1}(z_2/z_0)+\tan^{-1}(z_1/z_0)]}r_1r_2e^{-i(\theta_{m1}+\theta_{m2})}=e^{-i2m\pi},
+    \end{align}
+    其中 $k'=k\left[1+\frac{\chi'}{2n^2}\right]-ik\frac{\chi''}{2n^2}-i\frac{\alpha}{2}$, $k=\frac{2\pi\nu}{c}$.
 \end{pf}
 
 \begin{exe}
