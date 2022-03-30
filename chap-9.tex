@@ -10,7 +10,26 @@
     推导方程式 (9.3-22).
 \end{exe}
 \begin{pf}
-
+    由式 (8.3-4),
+    \begin{align}
+        \frac{\text{感应发射速率}/\text{模式}}{\text{自发辐射速率}/\text{模式}}=\frac{h\nu V_mW_i}{K}=n_m,
+    \end{align}
+    其中感应发射的跃迁速率
+    \begin{align}
+        W_i=\frac{\lambda^2I_{\nu}}{8\pi h\nu n^2t_{\text{自发}}}g(\nu),
+    \end{align}
+    辐射强度
+    \begin{align}
+        I_{\nu}=\frac{n_mh\nu}{V_m}\frac{c}{n},
+    \end{align}
+    频谱增宽
+    \begin{align}
+        \Delta\nu=\frac{1}{g(\nu_0)}.
+    \end{align}
+    故
+    \begin{align}
+        K=\frac{h\nu V_mW_i}{n_m}=\frac{h\nu V_m}{n_m}\frac{\lambda^2g(\nu_0)}{8\pi h\nu n^2t_{\text{自发}}}I_{\nu}=\frac{h\nu\lambda^2c}{8\pi n^3t_{\text{自发}}}g(\nu_0)=\frac{h\nu c^3}{8\pi n^3\nu^2\Delta\nu t_{\text{自发}}}.
+    \end{align}
 \end{pf}
 
 \begin{exe}
