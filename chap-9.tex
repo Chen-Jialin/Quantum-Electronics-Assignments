@@ -1,11 +1,11 @@
 % !Tex program = pdflatex
-% 第 8 章: 辐射场与原子系统的相互作用
+% 第 9 章: 激光振荡
 \ifx\allfiles\undefined
 \documentclass{note}
 \begin{document}
-\setcounter{chapter}{8}
 \fi
-\chapter{辐射场与原子系统的相互作用}
+\setcounter{chapter}{8}
+\chapter{激光振荡}
 \begin{exe}
     推导方程式 (9.3-22).
 \end{exe}
@@ -78,10 +78,30 @@
 \end{pf}
 
 \begin{exe}
-    推导式 (9.3-15).
+    推导式 (9.3-5).
 \end{exe}
 \begin{pf}
-    
+    由式 (9.3-4), 平衡态下,
+    \begin{align}
+        \label{9.6-1}
+        \frac{\mathrm{d}N_2}{\mathrm{d}t}=&R_2-\frac{N_2}{t_2}-\left(N_2-\frac{g_2}{g_1}N_1\right)W_i(\nu)=0,\\
+        \label{9.6-2}
+        \frac{\mathrm{d}N_1}{\mathrm{d}t}=&R_1-\frac{N_1}{t_1}+\frac{N_2}{t_{21}}+\left(N_2-\frac{g_2}{g_1}N_1\right)W_i(\nu)=0.
+    \end{align}
+    上面两式相加得
+    \begin{gather}
+        R_2-\frac{N_2}{t_2}+R_1-\frac{N_1}{t_1}+\frac{N_2}{t_{21}}=0,\\
+        \label{9.6-3}
+        \Longrightarrow N_1=\left(\frac{1}{t_{21}}-\frac{1}{t_2}\right)t_1N_2+(R_1+R_2)t_1.
+    \end{gather}
+    将上式代入式 \eqref{9.6-1} 中得
+    \begin{align}
+        N_2=\frac{R_2t_2+(R_1+R_2)t_1t_2\frac{g_2}{g_1}W_i}{1+\left[t_2+(1-\delta)t_1\frac{g_2}{g_1}\right]W_i(\nu)}.
+    \end{align}
+    利用上式和式 \eqref{9.6-3} 得
+    \begin{align}
+        \Delta N\equiv N_2-\frac{g_2}{g_1}N_1=\frac{R_2t_2-(R_1+\delta R_2)t_1\frac{g_2}{g_1}}{1+\left[t_1+(1-\delta)t_1\frac{g_2}{g_1}\right]W_i(\nu)}.
+    \end{align}
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
