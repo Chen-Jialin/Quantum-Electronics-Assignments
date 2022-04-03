@@ -36,7 +36,19 @@
     推导由于高斯光束模式的横向束缚, 对激光振荡器共振频率的影响. 在共焦腔的模式和 $z_0\gg l$ 的模式之间的共振频率有什么变化 ($l$ 为谐振腔长度)?
 \end{exe}
 \begin{pf}
-    
+    谐振腔的共振频率
+    \begin{align}
+        \nu_m=\frac{mc}{2nl}+\frac{c}{2\pi nl}\left(\tan^{-1}\frac{z_2}{z_0}-\tan^{-1}\frac{z_1}{z_0}-\frac{\theta_{m1}+\theta_{m2}}{2}\right).
+    \end{align}
+    对共焦腔模式, $R_1=R_2=l$, $\tan^{-1}(z_2/z_0)=-\tan^{-1}(z_1/z_0)=\pi/4$, 共振频率
+    \begin{align}
+        \nu_m=\frac{mc}{2nl}+\frac{c}{2\pi nl}\left(\frac{\pi}{2}+\frac{\theta_{m1}+\theta_{m2}}{2}\right).
+    \end{align}
+    对 $z_0\gg l$ 的模式, $\tan^{-1}(z_2/z_0)\approx\tan^{-1}(z_1/z_0)\approx 0$, 共振频率
+    \begin{align}
+        \nu_m=\frac{mc}{2nl}+\frac{c}{2\pi nl}\left(\frac{\theta_{m1}+\theta_{m2}}{2}\right).
+    \end{align}
+    两者的共振频率相差 $\frac{c}{4nl}$.
 \end{pf}
 
 \begin{exe}
