@@ -81,7 +81,24 @@
     若一个光脉冲在原子介质中传播, 脉冲的中心频率等于原子的共振频率 $\omega_0$, 考虑原子介质的色散对脉冲的群速的影响, 分两种情况讨论: (a) 放大介质, (b) 吸收介质. 若不考虑烧孔效应并假定脉冲频谱比 $\Delta\nu$ 窄, 试将群速表示为洛伦兹谱线的峰值增益的函数.
 \end{exe}
 \begin{sol}
-
+    当脉冲的中心频率等于原子的共振频率 $\omega_0$ 时, 脉冲群速度
+    \begin{align}
+        \notag v_g=&\left.\frac{\partial\omega}{\partial k'}\right|_{\omega=\omega_0}=\frac{1}{\pi}\left(\frac{\partial k'}{\partial\nu}\right)^{-1}_{\nu=\nu_0}=\frac{1}{2\pi}\left\{\frac{\partial}{\partial\nu}\frac{2\pi n\nu}{c}\left[1+\frac{\chi'(\nu)}{2n^2}\right]\right\}^{-1}_{\nu=\nu_0}\\
+        \notag=&\left\{\frac{\partial}{\partial\nu}\frac{n\nu}{c}\left[1+\frac{\nu-\nu_0}{\Delta\nu}\frac{\chi''(\nu)}{2n^2}\right]\right\}^{-1}_{\nu=\nu_0}\\
+        =&\frac{c}{n\left[1+\frac{\nu}{\Delta\nu_0}\frac{\chi''(\nu_0)}{2n^2}\right]}.
+    \end{align}
+    洛伦兹谱线的峰值增益系数为
+    \begin{align}
+        \gamma(\nu_0)=-k\frac{\chi''(\nu)}{n^2}=-\frac{2\pi n\nu_0}{c}\frac{\chi''(\nu_0)}{n^2},
+    \end{align}
+    故脉冲群速度
+    \begin{align}
+        v_g=\frac{c}{n\left[1-\frac{\gamma(\nu_0)c}{2\pi n\Delta\nu}\right]}.
+    \end{align}
+    \begin{itemize}
+        \item[(a)] 对放大介质, $\gamma(\nu_0)>0$, 故 $v_g>\frac{c}{n}$.
+        \item[(b)] 对吸收介质, $\gamma(\nu_0)<0$, 故 $v_g<\frac{c}{n}$.
+    \end{itemize}
 \end{sol}
 
 \begin{exe}
