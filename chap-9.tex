@@ -42,11 +42,27 @@
 \begin{exe}
     若法布里-珀罗谐振腔内放入极化率为 $\chi(\omega)$ 的原子介质, 试证明模之间频率间隔等于
     \[
-        \omega_m-\omega_{m-1}=\frac{\pi c}{nl\left[1+\frac{\omega}{2n^2}-\frac{\partial\chi'(\omega)}{\partial\omega}\right]_{\omega=\omega_m}}.
+        \omega_m-\omega_{m-1}=\frac{\pi c}{nl\left[1+\frac{\omega}{2n^2}\frac{\partial\chi'(\omega)}{\partial\omega}\right]_{\omega=\omega_m}}.
     \]
 \end{exe}
 \begin{pf}
-    
+    该 F-B 腔的谐振条件为
+    \begin{gather}
+        k_m'l=\frac{n\omega_m}{c}\left[1+\frac{\chi'(\omega_m)}{2n^2}\right]l=m\pi,\\
+        \Longrightarrow\omega_m\left[1+\frac{\chi'(\omega_m)}{2n^2}\right]=\frac{m\pi c}{nl}.
+    \end{gather}
+    用 $m-1$ 代换 $m$ 得
+    \begin{align}
+        \omega_{m-1}\left[1+\frac{\chi'(\omega_m)}{2n^2}\right]=\frac{(m-1)\pi c}{nl}.
+    \end{align}
+    以上两式相减得
+    \begin{align}
+        \omega_m-\omega_{m-1}+\frac{\omega_m\chi'(\omega_m)-\omega_{m-1}\chi'(\omega_{m-1}')}{2n^2}=(\omega_m-\omega_{m-1})\left[1+\frac{\chi'(\omega)}{2n^2}+\frac{\omega}{2n^2}\frac{\partial\chi(\omega)}{\partial\omega}\right]_{\omega=\omega_m}=\frac{\pi c}{nl},
+    \end{align}
+    从而模式之间频率间隔为
+    \begin{align}
+        \omega_m-\omega_{m-1}=\frac{\pi c}{nl\left[1+\frac{\chi'(\omega)}{2n^2}+\frac{\omega}{2n^2}\frac{\partial\chi'(\omega)}{\partial\omega}\right]_{\omega=\omega_m}}.
+    \end{align}
 \end{pf}
 
 \begin{exe}
