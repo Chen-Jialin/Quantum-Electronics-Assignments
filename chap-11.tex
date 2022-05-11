@@ -3,24 +3,127 @@
 \ifx\allfiles\undefined
 \documentclass{note}
 \begin{document}
-\setcounter{chapter}{10}
 \fi
+\setcounter{chapter}{10}
 \chapter{激光器的 Q 开关和锁模}
 \begin{exe}
     \begin{itemize}
-        \item[(a)] 在锁模实验装置示意图 11.11 中的 $A$, $B$, $C$, $D$ 部分预期可以观察到什么, 试定性地描述. 读者首先要阅读第 8 章参考文献 [7] 关于光电倍增管一节就可以找到答案.
+        \item[(a)] 在锁模实验装置示意图 11.11 中的 A, B, C, D 部分预期可以观察到什么, 试定性地描述. 读者首先要阅读第 8 章参考文献 [7] 关于光电倍增管一节就可以找到答案.
         \item[(b)] 锁模对射频频谱分析仪 $F$ 所显示的拍频信号 (在频率为 $\omega=\pi c/l$ 处) 强度有什么影响? 假设 $N$ 是间隔为 $\omega$ 的等振幅模其位相在锁模前是随机的. (答: 锁模可使拍频信号功率增加 $N$ 倍.)
     \end{itemize}
 \end{exe}
 \begin{sol}
+    \begin{itemize}
+        \item[(a)] A 部分用可调光电倍增管直接探测锁模激光的信号, 可调光电倍增管对光信号具有显著的放大作用且响应速度很快, 故可得到时域上周期为 $\tau=\frac{T}{N}$ 的脉冲序列, 其中 $T=\frac{2l}{c}$, $N$ 为锁模的模式数.
 
+        B 部分用光电倍增管探测锁模激光的信号, 并用射频频谱分析仪分析, 故可得一中心频率为 $\omega=\frac{2\pi}{T}=\frac{\pi c}{l}$ 的峰.
+
+        C 部分先用扫描干涉仪选频, 再用光电倍增管探测透射频率的光的信号, 扫描干涉仪的本质是一 Fabry–Pérot 干涉仪, 通过扫描其腔长以改变其透射频率, 故可得锁模激光中的光谱, 即频域上介质增益曲线峰值点附近一系列间隔为 $\omega=\frac{2\pi}{T}=\frac{\pi c}{l}$ 的峰.
+
+        D 部分用点接触二极管直接探测锁模激光的信号, 二极管对光信号的放大作用远不如光电倍增管, 故可得到时域上周期为 $T=\frac{2l}{c}$ 的脉冲序列.
+        \item[(b)] 锁模前信号中存在 $\omega_0+n\omega$ ($n=0,\pm 1,\pm 2,\cdots$) 的各个频率分量, 锁模使各频率分量产生了干涉, 从而在时域上出现了明显的周期为 $T=\frac{2l}{c}$ 的拍频, 故锁模可使拍频信号功率增加 $N$ 倍.
+    \end{itemize}
 \end{sol}
 
 \begin{exe}
-    当介电常数 $e$ (而不是损耗 $\sigma$) 在模之间的间隔频率 $c/2l$ 处受到调制时试分析锁模的情况. 可论述非均匀加宽激光器的情况, 在某种意义上类似于 11.2 节的形式, 或者论述 11.3 节所考虑的均匀加宽激光器的情况.
+    当介电常数 $\varepsilon$ (而不是损耗 $\sigma$) 在模之间的间隔频率 $c/2l$ 处受到调制时试分析锁模的情况. 可论述非均匀加宽激光器的情况, 在某种意义上类似于 11.2 节的形式, 或者论述 11.3 节所考虑的均匀加宽激光器的情况.
 \end{exe}
 \begin{sol}
-
+    谐振腔内电磁场满足麦克斯韦方程:
+    \begin{align}
+        \nabla\times\bm{H}=&\sigma \bm{E}+\varepsilon\frac{\partial\bm{E}}{\partial t},\\
+        \nabla\times\bm{E}=&-\mu\frac{\partial\bm{H}}{\partial t},
+    \end{align}
+    其中谐振腔内电磁场 $\bm{E}(\bm{r},t)$ 和 $\bm{H}(\bm{r},t)$ 可展开为简正模的线性叠加
+    \begin{align}
+        \bm{E}(\bm{r},t)=&-\sum_a\frac{1}{\sqrt{\varepsilon}}p_a(t)\bm{E}_a(\bm{r}),\\
+        \bm{H}(\bm{r},t)=&\sum_a\frac{1}{\sqrt{\mu}}\omega_aq_a(t)\bm{H}_a(\bm{r}),
+    \end{align}
+    其中 $\omega_a=\frac{k_a}{\sqrt{\mu\varepsilon}}$,
+    再利用关系式
+    \begin{align}
+        k_a\bm{E}_a=\nabla\times\bm{H}_a,\\
+        k_a\bm{H}_a=\nabla\times\bm{E}_a,
+    \end{align}
+    得
+    \begin{align}
+        \label{11.2-1}
+        \sum_a\frac{1}{\sqrt{\mu}}\omega_aq_ak_a\bm{E}_a=&-\frac{\sigma}{\sqrt{\varepsilon(\bm{r},t)}}\sum_ap_a\bm{E}_a-\sqrt{\varepsilon(\bm{r},t)}\sum_a\dot{p}_a\bm{E}_a,\\
+        \label{11.2-2}
+        \dot{q}_b=&p_b.
+    \end{align}
+    用 $\bm{E}_b$ 点乘式 \eqref{11.2-1} 并在腔体积范围内积分得
+    \begin{align}
+        \label{11.2-3}
+        \omega_b^2q_b=-\sum_aS_{b,a}(t)p_a-\dot{p}_b,
+    \end{align}
+    其中
+    \begin{align}
+        \label{11.2-4}
+        S_{b,a}(t)=\sigma\int_{\text{腔}}\frac{1}{\varepsilon(\bm{r},t)}\bm{E}_a\cdot\bm{E}_b\,\mathrm{d}v.
+    \end{align}
+    引入简正模振幅
+    \begin{align}
+        \label{11.2-normal-mode-amplitude}
+        c_a(t)=(2\omega_a)^{-1/2}[\omega_aq_a(t)+ip_a(t)].
+    \end{align}
+    利用式 \eqref{11.2-normal-mode-amplitude} 及其在式 \eqref{11.2-2} 和 \eqref{11.2-3} 的复共轭
+    \begin{align}
+        \label{11.2-7}
+        \frac{\mathrm{d}c_a}{\mathrm{d}t}=&-i\omega_ac_a+\sum_bx_{a,b}(t)(c_b^*-c_b),\\
+        \label{11.2-8}
+        \frac{\mathrm{d}c_a^*}{\mathrm{d}t}=&i\omega_ac_a^*-\sum_bx_{a,b}(t)(c_b^*-c_b),
+    \end{align}
+    其中
+    \begin{align}
+        \label{11.2-5}
+        x_{a,b}(t)=\frac{1}{2}\sqrt{\frac{\omega_b}{\omega_a}}S_{a,b}(t).
+    \end{align}
+    取介电常数为一平均项和一谐波微扰项之和
+    \begin{align}
+        \varepsilon(\bm{r},0)=\varepsilon_0+\varepsilon_1(\bm{r})\cos(\omega_mt+\phi),
+    \end{align}
+    则利用式 \refeq{11.2-4} 和式 \eqref{11.2-5} 知 $x_{a,b}(t)$ 具有如下形式:
+    \begin{align}
+        \label{11.2-6}
+        x_{a,b}(t)=\frac{\sigma_0}{2\varepsilon_0}\delta_{a,b}+\frac{x_{a,b}}{2}[e^{i(\omega_mt+\phi)}+e^{-i(\omega_mt+\phi)}],
+    \end{align}
+    其中
+    \begin{align}
+        x_{a,b}=-\frac{\sigma}{2\varepsilon_0^2}\sqrt{\frac{\omega_b}{\omega_a}}\int_{\text{腔}}\varepsilon_1(\bm{r})\bm{E}_a\cdot\bm{E}_b\,\mathrm{d}v.
+    \end{align}
+    将式 \eqref{11.2-6} 回代入运动方程 \eqref{11.2-7} 得
+    \begin{align}
+        \label{11.2-9}
+        \frac{\mathrm{d}c_a^*}{\mathrm{d}t}=i\omega_ac_a^*+\frac{\sigma_0}{2\varepsilon_0}(c_a^*-c_a)-\sum_b\frac{x_{a,b}}{2}[e^{i(\omega_mt+\phi)}+e^{-i(\omega_mt+\phi)}](c_b^*-c_b).
+    \end{align}
+    定义失调参数 $\Delta\omega_m$ 为调试频率与模间距 (自由光谱范围) 的偏离值
+    \begin{align}
+        \omega_{a+1}-\omega_a=\frac{\pi c}{l}=\omega_m-\Delta\omega_m,
+    \end{align}
+    定义绝热变量 $D_a^*(t)$ 为
+    \begin{align}
+        c_a^*=D_a^*(t)e^{i[(\omega_a+a\Delta\omega_m)t+a\phi+a\pi/2]}e^{-(\sigma/2\varepsilon)t},
+    \end{align}
+    代入式 \eqref{11.2-9} 并略去相对于 $D_a^*(t)$ 的快变项得
+    \begin{align}
+        \frac{\mathrm{d}D_a^*}{\mathrm{d}t}+ia\Delta\omega D_a^*=-i\frac{x}{2}D_{a+1}^*+i\frac{x}{2}D_{a-1}^*,
+    \end{align}
+    其中 $x=x_{a,a+1}\approx x_{a,a-1}$.
+    稳态下 ($\frac{\mathrm{d}D_a^*}{\mathrm{d}t}=0$), 解得绝热变量为
+    \begin{align}
+        D_a^*=I_a\left(\frac{x}{\Delta\omega}\right),
+    \end{align}
+    其中 $I_a$ 为 $a$ 阶双曲 Bessel 函数, 从而稳态下
+    \begin{align}
+        c_a^*(t)=I\left(\frac{x}{\Delta\omega}\right)e^{i[(\omega_a+a\Delta\omega_m)t+a\phi+a\pi/2]}e^{-\sigma t/2\varepsilon_0},
+    \end{align}
+    其中 $\omega_a+a\Delta\omega_m=\omega_0+a\frac{\pi c}{l}+a\Delta\omega_m=\omega_0+a\omega_m$, 当 $\frac{x}{\Delta\omega_m}\gg 1$, $I_a\left(\frac{x}{\Delta\omega_m}\right)$, 从而
+    \begin{align}
+        c_a^*(t)=\left(2\pi\frac{x}{\Delta\omega}\right)^{-1/2}e^{i[(\omega_0+a\omega_m)+a\phi+a\pi/2]},
+    \end{align}
+    其中考虑到增益与损耗平衡, 故衰减因子 $\exp(-\sigma t/2\varepsilon_0)$.
+    由上式可见, 各相邻振荡模式之间存在稳定的相位差 $\phi+\pi/2$, 从而可实现与调制 $\sigma$ 类似的锁模效果.
 \end{sol}
 \ifx\allfiles\undefined
 \end{document}
