@@ -10,7 +10,36 @@
     推导九个椭圆的方程式, 这些椭圆是由如图 14.3c 所示的光场矢量 (作为位相延迟 $\Gamma$ 的函数) 描绘出来的.
 \end{exe}
 \begin{pf}
-
+    $x'$ 和 $y'$ 方向的光场矢量分别为
+    \begin{align}
+        \label{14.1-1}
+        E_{x'}=A\cos\left[\omega t-\left(\frac{\omega}{c}\right)\left(n_o-\frac{n_o^3}{2}r_{63}E_z\right)z\right],\\
+        \label{14.1-2}
+        E_{y'}=A\cos\left[\omega t-\left(\frac{\omega}{c}\right)\left(n_o+\frac{n_o^3}{2}r_{63}E_z\right)z\right].
+    \end{align}
+    这两个矢量的相位差为
+    \begin{align}
+        \Gamma=\frac{\omega n_o^3r_{63}}{c}E_zz.
+    \end{align}
+    将这两个矢量分别重写为
+    \begin{align}
+        E_{x'}=&A\cos(\omega t-kz+\Gamma/2)=A[\cos(\omega t-kz)\cos(\Gamma/2)-\sin(\omega t-kz)\sin(\Gamma/2)],\\
+        E_{y'}=&A\sin(\omega t-kz-\Gamma/2)=A[\cos(\omega t-kz)\cos(\Gamma/2)+\sin(\omega t-kz)\sin(\Gamma/2)],
+    \end{align}
+    其中 $k=\frac{n_o\omega}{c}$,
+    从而
+    \begin{align}
+        \sin(\omega t-kz)=&\frac{E_{y'}-E_{x'}}{2A\sin(\Gamma/2)},\\
+        \cos(\omega t-kz)=&\frac{E_{y'}+E_{x'}}{2A\cos(\Gamma/2)}.
+    \end{align}
+    利用
+    \begin{align}
+        \sin^2(\omega t-kz)+\cos^2(\omega t-kz)=1
+    \end{align}
+    得
+    \begin{align}
+        E_{x'}^2+E_{y'}^2-2E_{x'}E_{y'}\cos\Gamma=A^2\sin^2\Gamma.
+    \end{align}
 \end{pf}
 
 \begin{exe}
