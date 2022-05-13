@@ -84,7 +84,27 @@
     答案: $\Gamma_m<0.5$.
 \end{exe}
 \begin{sol}
-    
+    由式 (14.3-7), 交变电压调制下出射光强与入射光强之比为
+    \begin{align}
+        \frac{I_o}{I_i}=\frac{1}{2}[1+\sin(\Gamma_m\sin\omega_mt)].
+    \end{align}
+    利用
+    \begin{align}
+        \sin(z\sin\phi)=2\sum_{n=0}^{\infty}J_{2n+1}(z)\sin[(2n+1)\phi],
+    \end{align}
+    可将上式展开为
+    \begin{align}
+        \frac{I_o}{I_i}=\frac{1}{2}+\sum_{n=0}^{\infty}J_{2n+1}(\Gamma_m)\sin[(2n+1)\omega_mt].
+    \end{align}
+    其中三次谐波 ($3\omega_m$) 与基波的比值随 $\Gamma_m$ 的变化曲线如图 \ref{14.3} 所示.
+    \begin{figure}[H]
+        \centering
+        \subfigure{\includegraphics[width=.4\columnwidth]{Figures/14.3-1.png}}
+        \subfigure{\includegraphics[width=.4\columnwidth]{Figures/14.3-2.png}}
+        \caption{出射强度的三次谐波 $(3\omega_m)$ 与基波的比值随 $\Gamma_m$ 的变化曲线.}
+        \label{14.3}
+    \end{figure}
+    由上图知, 若要求该比值不超过 $10^{-2}$, 则最大允许的 $\Gamma_m$ 为 $0.5$.
 \end{sol}
 
 \begin{exe}
