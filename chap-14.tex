@@ -43,14 +43,44 @@
 \end{pf}
 
 \begin{exe}
-    讨论式 (14.5-1) 中与场无关的延迟 $(\omega l/c)(n_0-n_e)$ 对振幅调制器 (如图 14.4 所示) 的影响.
+    讨论式 (14.5-1) 中与场无关的延迟 $(\omega l/c)(n_o-n_e)$ 对振幅调制器 (如图 14.4 所示) 的影响.
 \end{exe}
 \begin{sol}
-
+    横向调制时 $z$ 方向和 $x'$ 方向的相位延迟为式 (14.5-1):
+    \begin{align}
+        \Gamma=\phi_z-\phi_x'=\frac{\omega l}{c}\left[(n_o-n_e)-\frac{n_o^3}{2}r_{63}\left(\frac{V}{d}\right)\right].
+    \end{align}
+    设入射光的 $x'$ 方向和 $z$ 方向的电场矢量分别为
+    \begin{align}
+        E_x'(0)=&A,\\
+        E_z(0)=&A,
+    \end{align}
+    则入射光强度
+    \begin{align}
+        I_i\propto\abs{E_x'(0)}^2+\abs{E_z(0)}^2=2A^2,
+    \end{align}
+    从电光晶体出射的光的 $x'$ 方向和 $z$ 方向电场矢量可分别写为
+    \begin{align}
+        E_x'(l)=&A,\\
+        E_z(l)=&Ae^{-i\Gamma},
+    \end{align}
+    从检偏振器出射的光的电场矢量为
+    \begin{align}
+        E_o=\frac{1}{\sqrt{2}}[E_x'(l)-E_z(l)]=\frac{A}{\sqrt{2}}(e^{-i\Gamma}-1)
+    \end{align}
+    从检偏振器出射的光强
+    \begin{align}
+        I_o\propto\abs{E_o}^2=\frac{A^2}{2}(e^{-i\Gamma}-1)(e^{i\Gamma}-1)=2A^2\sin^2\frac{\Gamma}{2}.
+    \end{align}
+    出射光和入射光强度之比为
+    \begin{align}
+        \frac{I_o}{I_i}=\sin^2\frac{\Gamma}{2}.
+    \end{align}
+    由于式 (14.5-1) 中与场无关的延迟 $(\omega l/c)(n_o-n_e)$ 依赖温度, 故振幅调制器的透射率可能随环境温度发生漂移.
 \end{sol}
 
 \begin{exe}
-    用 $\sin(a\sin x)$ 的贝塞尔鼹鼠展开式并根据调制频率 $\omega_m$ 的谐振函数来表示式 (14.3-7). 划出出射强度的三次谐波 ($3\omega_m$) 与基波的比值随 $\Gamma_m$ 的变化曲线. 若比值不超过 $10^{-2}$, 问最大允许的 $\Gamma_m$ 是多少?\\
+    用 $\sin(a\sin x)$ 的贝塞尔函数展开式并根据调制频率 $\omega_m$ 的谐振函数来表示式 (14.3-7). 划出出射强度的三次谐波 ($3\omega_m$) 与基波的比值随 $\Gamma_m$ 的变化曲线. 若比值不超过 $10^{-2}$, 问最大允许的 $\Gamma_m$ 是多少?\\
     答案: $\Gamma_m<0.5$.
 \end{exe}
 \begin{sol}
