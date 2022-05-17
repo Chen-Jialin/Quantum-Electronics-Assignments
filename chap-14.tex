@@ -132,7 +132,26 @@
     推导型号如 14.5 节举例中所描述的横向 $\bar{4}3m$ 晶体光电调制器的调制功率的表达式 (类似式 (14.6-2)).
 \end{exe}
 \begin{pf}
-    
+    由课本式 (14.5-9) 横向 $\bar{4}3m$ 晶体相位调制器的相位延迟与调制电压之间的关系为
+    \begin{gather}
+        \Gamma_m=\frac{\sqrt{3}\pi n_o^3r_{41}}{\lambda}\frac{V_ml}{d},\\
+        \Longrightarrow V_m=\frac{\Gamma_m\lambda d}{\sqrt{3}\pi n_o^3r_{41}l}.
+    \end{gather}
+    由课本式 (14.6-1), 极大调制带宽为
+    \begin{gather}
+        \Delta\nu=\frac{\Delta\omega}{2\pi}\approxeq\frac{1}{2\pi R_LC},\\
+        \Longrightarrow R_L=\frac{1}{2\pi C\Delta\nu},
+    \end{gather}
+    其中调制器电极的电容可用平行板电容的决定式得到:
+    \begin{align}
+        C=\frac{\varepsilon lw}{d},
+    \end{align}
+    $l$, $w$ 和 $d$ 分别为晶体的长、宽和高.
+    调制器的调制功率为
+    \begin{align}
+        P=\frac{V_m^2}{2R_L}=\frac{\Gamma_m^2\lambda^2d^2}{6\pi^2n_o^2r_{41}^2l^2R_L}=\frac{\Gamma^2\lambda^2A\varepsilon\Delta\nu}{3\pi n_o^6r_{41}^2l},
+    \end{align}
+    其中晶体截面积 $A=wd$.
 \end{pf}
 
 \begin{exe}
