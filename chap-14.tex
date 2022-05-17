@@ -216,7 +216,35 @@
     提示: X 射线衍射发生在分立的原子平面上, 它可被理想化为无限薄的薄片, 而声波的扰动则是正弦曲线的.
 \end{exe}
 \begin{sol}
-    
+    当 X 射线受声波散射时, 由于声波
+    \begin{align}
+        S_{kl}(\bm{r},t)=\frac{S_{kl}}{2}e^{i(\omega_st-\bm{k}\cdot\bm{r})}+\text{c.c.}
+    \end{align}
+    仅有一个频率为 $\pm\omega_s$ 的分量, 故其引起的电极化强度扰动
+    \begin{align}
+        \Delta P_i(\bm{r},t)=-\frac{1}{4}\varepsilon_0\varepsilon_i'\varepsilon_d'p_{idkl}E_d(r_d)[e^{i(\omega_dt-\bm{k}_d\cdot\bm{r})}+\text{c.c.}]\times S_{kl}[e^{i(\omega_st-\bm{k}_s\cdot\bm{r})}+\text{c.c.}],
+    \end{align}
+    仅有频率为 $\pm(\omega_d+\omega_s)$ 和 $\pm(\omega_d-\omega_s)$ 的分量, 故仅在
+    \begin{align}
+        \omega_i=&\omega_d\pm\omega_s,\\
+        \bm{k}_i=&\bm{k}_d\pm\bm{k}_s
+    \end{align}
+    下能满足能量守恒和动量守恒.
+
+    而当 X 受晶格散射时, 由于周期性排布的原子平面引起的扰动包含等频率间隔的多个分量:
+    \begin{align}
+        A_{kl}(\bm{r})=\sum_{m=0}^{\infty}A_{kl}(m\omega_a)e^{im(\omega_a-\bm{k}_at)}+\text{c.c.}
+    \end{align}
+    故其引起的电极化强度扰动
+    \begin{align}
+        \Delta P_i\propto E_d(\bm{r},t)A_{kl}(\bm{r},t)=E_d(r_d)[e^{i(\omega_dt-\bm{k}_d\cdot\bm{r})}+\text{c.c.}]\times\left[\sum_{m=0}^{\infty}A_{kl}(m\omega_a)e^{im(\omega_a-\bm{k}_at)}+\text{c.c.}\right]
+    \end{align}
+    有频率为 $\pm(\omega_d\pm m\omega_a)$ 的多个分量, 故在
+    \begin{align}
+        \omega_i=&\omega_d\pm m\omega_a,\\
+        \bm{k}_i=&\bm{k}_d\pm m\bm{k}_a,\quad m=1,2,3,\cdots
+    \end{align}
+    下均能满足能量守恒和动量守恒.
 \end{sol}
 
 \begin{exe}
