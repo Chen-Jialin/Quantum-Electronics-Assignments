@@ -255,8 +255,27 @@
     可见, 可允许的失配量 $\Delta k$ 同 $\eta$ 有关. 你能对违反动量守恒作出直观的解释吗?
 \end{exe}
 \begin{pf}
-    
-\end{pf}
+    对 $\Delta k=\abs{\bm{k}_i-\abs{\bm{k}_s}-\bm{k}_d}\neq 0$、小输入信号 $E_i(0)$ 且共线情况下, 耦合模方程 (14.9-8) 可写为
+    \begin{align}
+        \label{14.10-1}
+        \frac{\mathrm{d}E_i}{\mathrm{d}z}=&i\eta E_de^{i\Delta kz},\\
+        \label{14.10-2}
+        \frac{\mathrm{d}E_d}{\mathrm{d}z}=&i\eta E_ie^{-i\Delta kz},
+    \end{align}
+    其中 $\eta\equiv\eta_{di}=\eta_{id}\approxeq\frac{\pi n^3}{2\pi}p_{idkl}S_{kl}$.
+    对式 \eqref{14.10-1} 关于 $z$ 求偏导并利用式 \eqref{14.10-2} 和 \eqref{14.10-2} 消去 $E_d$ 得
+    \begin{align}
+        \frac{\mathrm{d}^2E_i}{\mathrm{d}z^2}-i\Delta k\frac{\mathrm{d}E_i}{\mathrm{d}z}+\eta^2E_i=0,
+    \end{align}
+    结合初始条件 $E_i(0)$ 和 $\frac{\mathrm{d}E_i}{\mathrm{d}z}(0)=i\eta E_d(0)$ 解得
+    \begin{align}
+        E_i(z)=&\left[E_i(0)\cos\left(\frac{\sqrt{\Delta k^2+4\eta^2}}{2}z\right)+i\frac{-\Delta kE_i(0)+2\eta E_d(0)}{\sqrt{\Delta k^2+4\eta^2}}\sin\left(\frac{\sqrt{\Delta k^2+4\eta^2}}{2}z\right)\right]e^{i\Delta kz/2}.
+    \end{align}
+    在小输入信号情况下, $E_i(0)\ll E_d(0)$, 故入射功率转化为衍射光束的最大比率为
+    \begin{align}
+        \frac{\abs{E_i(z)}^2}{\abs{E_d(0)}^2}=\frac{\abs{E_i(0)}^2+\abs{\frac{-\Delta kE_i(0)+2\eta E_d(0)}{\sqrt{\Delta k^2+4\eta^2}}}^2}{\abs{E_d(0)}^2}\approx\frac{\eta}{\sqrt{\eta^2+\left(\frac{\Delta k^2}{2}\right)^2}}.
+    \end{align}
+\end{pf}% TODO
 
 \begin{exe}
     从多普勒理论和式 (14.9-12) 推导出式 (14.9-11).
