@@ -281,7 +281,36 @@
     从多普勒理论和式 (14.9-12) 推导出式 (14.9-11).
 \end{exe}
 \begin{pf}
-    
+    将声波视为以声速传播的周期性晶格.
+    以声波为参考系, 由相对论多普勒效应, 入射光的频率为
+    \begin{align}
+        \omega_i'=\frac{\omega_i}{\left(1-\frac{nv}{c}\sin\theta\right)\sqrt{1-\frac{n^2v^2}{c^2}}},
+    \end{align}
+    在声波参考系中, 声波静止, 故散射光的频率等于入射光的频率
+    \begin{align}
+        \omega_s'=\omega_i'.
+    \end{align}
+    在实验室参考系中, 散射光的频率为
+    \begin{align}
+        \omega_s=\frac{\omega_s'}{\left(1-\frac{nv}{c}\sin\theta\right)\sqrt{1-\frac{n^2v^2}{c^2}}}=\frac{\omega_i}{\left(1-\frac{nv}{c}\sin\theta\right)^2\left(1-\frac{n^2v^2}{c^2}\right)},
+    \end{align}
+    由于声速 $v\ll$ 光速 $c$, 故有近似
+    \begin{align}
+        \label{14.11-1}
+        \omega_d\approx\omega_i\left(1+\frac{2nv}{c}\sin\theta\right).
+    \end{align}
+    式 (14.9-12) 描述了光波长和声波长之间的关系:
+    \begin{align}
+        2\lambda_s\sin\theta=\frac{\lambda}{n},
+    \end{align}
+    其中声波长 $\lambda_s=\frac{2\pi v}{\omega_s}$, 光波长 $\lambda=\frac{2\pi c}{\omega_i}$, 故由上式得
+    \begin{align}
+        \sin\theta=\frac{\omega_sc}{2n\omega_iv}.
+    \end{align}
+    将上式代入式 \eqref{14.11-1} 中得
+    \begin{align}
+        \omega_d=\omega_i+\omega_s.
+    \end{align}
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
