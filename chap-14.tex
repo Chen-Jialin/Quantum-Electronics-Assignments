@@ -204,7 +204,24 @@
     查阅文献 (例如可阅读文献 [17] 和 [18]) 并阐述布拉格衍射和德拜-西尔斯 (Debye-Sears) 衍射之间的差别. 在什么条件下可观察到每种衍射?
 \end{exe}
 \begin{sol}
-    
+    德拜-西尔斯衍射: 如图 \ref{14.8-fig}(a)(b) 所示, 入射光 (频率为 $\omega$, 波长为 $\lambda$, 波矢为 $\bm{\beta}$) 传播方向与声波 (频率为 $\omega_m$, 波长为 $\Lambda$, 波矢为 $\bm{k}_s$) 传播方向垂直, 产生频率分别为 $\omega\pm\omega_m$, $\omega\pm 2\omega_m$, $\omega\pm 3\omega_m$, $\cdots$ 等一系列边带的衍射光, 分别与原入射方向成夹角 $\pm\arcsin\frac{\lambda}{\Lambda}$, $\pm\arcsin\frac{2\lambda}{\Lambda}$, $\pm\arcsin\frac{3\lambda}{\Lambda}$, $\cdots$ 出射. 如图 \ref{14.8-fig}(c) 所示, 各级次的衍射光的振幅与声波调制引起的相位变化幅度 $\Delta\phi=2\pi\frac{l}{\lambda}\Delta n$ 有关.
+
+    布拉格衍射的条件: 除了要求出射光频率 $\omega'=\omega\pm\omega_m$, $\omega\pm 2\omega_m$, $\omega$, 波矢 $\bm{\beta}'=\bm{\beta}\pm\bm{k}_s$, $\bm{\beta}\pm 2\bm{k}_s$, $\bm{\beta}\pm 3\bm{k}_s$, $\cdots$, 还需材料厚度 $l$ 满足 $2\pi\lambda l\ll\Lambda^2$.
+
+    布拉格衍射: 如图 \ref{14.8-fig}(d) 所示, 入射光传播方向与声波波前平面成夹角 $\frac{\lambda}{2\Lambda}$, 产生频率为 $\omega+\omega_m$, 传播方向与声波波前成夹角 $-\frac{\lambda}{2\Lambda}$ 的衍射光. 布拉格衍射对衍射级次的选择性很强, 其余边带由于相干相消的效应被抑制, 因而只有一个频率分量的衍射光出射.
+
+    布拉格衍射的条件为: 出射光频率 $\omega'=\omega\pm\omega_m$, 波矢 $\bm{\beta}'=\bm{\beta}\pm\bm{k}_s$ ($\pm$ 取决于声波的方向), 对材料厚度无要求.
+
+    \footnote{参考文献: Adler, Robert. "Interaction between light and sound." \itshape{IEEE spectrum} 4.5 (1967): 42-54.}
+    \begin{figure}[H]
+        \centering
+        \subfigure[德拜-西尔斯衍射, 入射光正入射介质, 声波传播方向与入射光传播方向垂直, 声波在介质中形成周期性压缩和拉伸的密度分布, 载波频率 (入射光频率) 的出射光沿原有传播方向出射, 一阶上边带 (频率为载波频率与一倍声波频率的和) 的衍射光与原有传播方向成夹角 $\frac{\lambda}{\Lambda}$ 出射, 其余频率和出射方向的衍射光未画出.]{\includegraphics[width=.4\columnwidth]{Figures/14.8-Debye-Sears-diffraction.png}}
+        \subfigure[德拜-西尔斯衍射载频和边带频谱.]{\includegraphics[width=.4\columnwidth]{Figures/14.8-Bragg-diffraction-side-band.png}}
+        \subfigure[德拜-西尔斯衍射载频及各边带出射光归一化振幅与声致相位差幅值的关系, 这些曲线即为各阶 Bessel 函数.]{\includegraphics[width=.4\columnwidth]{Figures/14.8-Bragg-diffraction-side-band-amplitude.png}}
+        \subfigure[布拉格衍射.]{\includegraphics[width=.4\columnwidth]{Figures/14.8-Bragg-diffraction.png}}
+        \caption{}
+        \label{14.8-fig}
+    \end{figure}
 \end{sol}
 
 \begin{exe}
