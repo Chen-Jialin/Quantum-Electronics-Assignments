@@ -1,7 +1,7 @@
 % !Tex program = pdflatex
 % 第 15 章: 辐射场与原子系统的相干相互作用
 \ifx\allfiles\undefined
-\documentclass{note}
+\documentclass[twoside]{note}
 \begin{document}
 \fi
 \setcounter{chapter}{14}
@@ -40,7 +40,29 @@
     推导式 (15.1-29) 和 (15.1-30).
 \end{exe}
 \begin{pf}
-    
+    矢量 $\bm{\omega}$ 与 III 轴的夹角 $\theta$ 满足
+    \begin{align}
+        \sin\theta=&\frac{\frac{2\mu E}{\hbar}}{\omega_e},\\
+        \cos\theta=&\frac{\omega-\omega_0}{\omega_e},\\
+        \tan\theta=&\frac{\frac{2\mu E}{\hbar}}{\omega-\omega_0},
+    \end{align}
+    其中
+    \begin{align}
+        \omega_e=\sqrt{\left(\frac{2\mu E}{\hbar}\right)^2+(\omega_0-\omega)^2}.
+    \end{align}
+    由基本的三角关系得
+    \begin{align}
+        r_I=&-\cos\theta\sin\theta+\sin\theta\cos\theta\cos\omega_et=-\frac{\frac{2\mu E}{\hbar}(\omega-\omega_0)}{\omega_e}(1-\cos\omega_et)=\frac{\omega_I(\omega-\omega_0)}{\omega_e^2}(1-\cos\omega_et),\\
+        r_{II}=&\sin\theta\sin\omega_et=\frac{\frac{2\mu E}{\hbar}}{\omega_e}\sin\omega_et=-\frac{\omega_I}{\omega_e}\sin\omega_et,\\
+        r_{III}=&\cos^2\theta+\sin^2\theta\cos\omega_et=1-\sin^2\theta(1-\cos\omega_et)=1-2\left(\frac{\frac{2\mu E}{\hbar}}{\omega_e}\right)^2\sin^2\left(\frac{\omega_et}{2}\right)=1-2\left(\frac{\omega_I}{\omega_e}\right)^2\sin^2\left(\frac{\omega_et}{2}\right),
+    \end{align}
+    此即课本式 (15.1-29), 其中 $\omega_I=-\frac{2\mu E}{\hbar}$.
+
+    利用关系式 $r_{III}=\abs{a}^2-\abs{b}^2$ 和归一化条件 $\abs{a}^2+\abs{b}^2=1$ 得
+    \begin{align}
+        \abs{a}^2=&\frac{1+r_{III}}{2}=1-\left(\frac{\omega_I}{\omega_e}\right)^2\sin^2\left(\frac{\omega_et}{2}\right),\\
+        \abs{b}^2=&\frac{1-r_{III}}{2}=\left(\frac{\omega_I}{\omega_e}\right)^2\sin^2\left(\frac{\omega_et}{2}\right).
+    \end{align}
 \end{pf}
 
 \begin{exe}
