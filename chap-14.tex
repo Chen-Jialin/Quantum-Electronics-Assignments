@@ -125,13 +125,15 @@
     利用参考文献 [8] 和 [9], 设计一个在频率 $\nu_m=10^9$ 赫时运转的部分负载 KDP 位相调制器并得到 $\delta=\pi/3$ 峰值位相偏移. 问调制功率是多少?
 \end{exe}
 \begin{sol}
-    如图 \ref{14.5-fig} 所示, 类似文献 \footnote{Peters, C. J. "Gigacycle bandwidth coherent light traveling-wave phase modulator." \itshape{Proceedings of the IEEE} 51.1 (1963): 147-153.} 中提出的行波调制结构, 光沿 KDP 晶体的 $z$ 轴传播, 偏振平行晶体的 $x$ 轴, 在晶体的 $z$ 方向上下安装两片平行于 $xy$ 平面的行波电极, 光波长为 $1\,\mu$m, 晶体宽 $a=2$ mm, 长度 $l=50$ cm, 为了实现外加电场和光场的相位匹配, 电极宽度
+    如图 \ref{14.5-fig} 所示, 类似文献 \footnote{Peters, C. J. "Gigacycle bandwidth coherent light traveling-wave phase modulator." \itshape{Proceedings of the IEEE} 51.1 (1963): 147-153.} 中提出的行波调制结构, 光沿 KDP 晶体的 $z$ 轴传播, 偏振平行晶体的 $x$ 轴, 在晶体的 $z$ 方向上下安装两片平行于 $xy$ 平面的行波电极, 光波长为 $1\,\mu$m, 晶体宽 $a=1$ mm, 长度 $l=50$ cm, 为了实现外加电场和光场的相位匹配, 电极宽度
     \begin{align}
-        w=\frac{a(\epsilon_1-1)}{n_o^2-1}=\frac{1\text{ mm}\times(20.2-1)}{1.5^2-1}=30.72\text{ mm}.
+        w=\frac{a(\epsilon_1-1)}{n_o^2-1}=\frac{1\text{ mm}\times(20.2-1)}{1.5^2-1}=15.6\text{ mm}.
     \end{align}
     为实现电极传输线阻抗与电源阻抗 (通常为 50 $\Omega$) 的匹配, 晶体高度
     \begin{align}
-        b=Z_0\left[\frac{w\epsilon_0(w-a+\epsilon_1a)}{\mu_0}\right]^{1/2}=50\,\Omega\left[\frac{30.72\times 10^{-3}\text{ m}\times8.85\times 10^{-12}\text{ F/m}\times(30.72\times 10^{-3}\text{ m}-)}{4\pi\times 10^{-7}\text{ F/m}}\right]^{1/2}=6.11\text{ mm}.
+        \notag b=&Z_0\left[\frac{w\epsilon_0(w-a+\epsilon_1a)}{\mu_0}\right]^{1/2}\\
+        \notag=&50\,\Omega\left[\frac{15.6\times 10^{-3}\text{ m}\times8.85\times 10^{-12}\text{ F/m}\times(15.6\times 10^{-3}\text{ m}-1\times 10^{-3}\text{ m}+20.2\times 1\times 10^{-3}\text{ m})}{4\pi\times 10^{-7}\text{ F/m}}\right]^{1/2}\\
+        =&3.10\text{ mm}.
     \end{align}
     由课本表 14.3, 调制器的相位延迟与调制电压之间的关系为
     \begin{align}
@@ -139,11 +141,11 @@
     \end{align}
     在相位匹配的条件下, 在频率 $\nu_m=10^9$ Hz 下得到 $\Gamma_m=\delta=\pi/3$ 的峰值相位偏移, 调制电压为
     \begin{align}
-        V_m=\frac{\Gamma_m\lambda b}{\pi ln_o^3r_{41}}=\frac{\frac{\pi}{3}\times 1\times 10^{-6}\text{ m}\times 6.11\times 10^{-3}\text{ m}}{\pi\times 0.5\text{ m}\times1.5^3\times 8.47\times 10^{-12}\text{ m/V}}=203\text{ V}.
+        V_m=\frac{\Gamma_m\lambda b}{\pi ln_o^3r_{41}}=\frac{\frac{\pi}{3}\times 1\times 10^{-6}\text{ m}\times 3.10\times 10^{-3}\text{ m}}{\pi\times 0.5\text{ m}\times1.5^3\times 8.47\times 10^{-12}\text{ m/V}}=72.3\text{ V}.
     \end{align}
     调制功率为
     \begin{align}
-        P_m=\frac{V_m}{2Z_0^2}=\frac{(106.87\text{ V})^2}{2\times 50\,\Omega}=203\text{ W}.
+        P_m=\frac{V_m}{2Z_0^2}=\frac{(72.3\text{ V})^2}{2\times 50\,\Omega}=52.3\text{ W}.
     \end{align}
     \begin{figure}[H]
         \centering
