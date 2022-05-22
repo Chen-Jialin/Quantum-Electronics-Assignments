@@ -10,7 +10,30 @@
     证明若原子初始处于低能态 $\lvert b\rangle$, 即 $\bm{r}_3(0)=-1$, 则描述原子初始处于高能态 $\lvert a\rangle$ 的运动的 $\bm{r}(t)$ 为负值.
 \end{exe}
 \begin{pf}
+    对于初始处于低能态 $\lvert b\rangle$ 的原子, 初始态矢量为
+    \begin{align}
+        \bm{r}=\begin{bmatrix}
+            0\\
+            0\\
+            -1
+        \end{bmatrix},
+    \end{align}
+    且态矢量运动方程为
+    \begin{align}
+        \frac{\mathrm{d}\bm{r}}{\mathrm{d}t}=\bm{\omega}(t)\times\bm{r},
+    \end{align}
+    从而解得 $\bm{r}$ 绕 $\bm{\omega}$ 逆时针转动 (逆着 $\bm{\omega}$ 的方向看).
 
+    对于初始处于高能态 $\lvert a\rangle$ 的原子, 初始态矢量为
+    \begin{align}
+        \bm{r}'(0)=\begin{bmatrix}
+            0\\
+            0\\
+            1
+        \end{bmatrix}=-\bm{r}(0),
+    \end{align}
+    同理解得 $\bm{r}'$ 同样绕 $\bm{\omega}$ 逆时针转动.
+    故从两种初始状态开始演化的态矢量始终相反, $\bm{r}(t)=-\bm{r}'(t)$.
 \end{pf}
 
 \begin{exe}
