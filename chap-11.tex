@@ -1,7 +1,7 @@
 % !Tex program = pdflatex
 % 第 11 章: 激光器的 Q 开关和锁模
 \ifx\allfiles\undefined
-\documentclass{note}
+\documentclass[twoside]{note}
 \begin{document}
 \fi
 \setcounter{chapter}{10}
@@ -70,32 +70,32 @@
     利用式 \eqref{11.2-normal-mode-amplitude} 及其在式 \eqref{11.2-2} 和 \eqref{11.2-3} 的复共轭
     \begin{align}
         \label{11.2-7}
-        \frac{\mathrm{d}c_a}{\mathrm{d}t}=&-i\omega_ac_a+\sum_bx_{a,b}(t)(c_b^*-c_b),\\
+        \frac{\mathrm{d}c_a}{\mathrm{d}t}=&-i\omega_ac_a+\sum_b\varkappa_{a,b}(t)(c_b^*-c_b),\\
         \label{11.2-8}
-        \frac{\mathrm{d}c_a^*}{\mathrm{d}t}=&i\omega_ac_a^*-\sum_bx_{a,b}(t)(c_b^*-c_b),
+        \frac{\mathrm{d}c_a^*}{\mathrm{d}t}=&i\omega_ac_a^*-\sum_b\varkappa_{a,b}(t)(c_b^*-c_b),
     \end{align}
     其中
     \begin{align}
         \label{11.2-5}
-        x_{a,b}(t)=\frac{1}{2}\sqrt{\frac{\omega_b}{\omega_a}}S_{a,b}(t).
+        \varkappa_{a,b}(t)=\frac{1}{2}\sqrt{\frac{\omega_b}{\omega_a}}S_{a,b}(t).
     \end{align}
     取介电常数为一平均项和一谐波微扰项之和
     \begin{align}
         \varepsilon(\bm{r},0)=\varepsilon_0+\varepsilon_1(\bm{r})\cos(\omega_mt+\phi),
     \end{align}
-    则利用式 \refeq{11.2-4} 和式 \eqref{11.2-5} 知 $x_{a,b}(t)$ 具有如下形式:
+    则利用式 \refeq{11.2-4} 和式 \eqref{11.2-5} 知 $\varkappa_{a,b}(t)$ 具有如下形式:
     \begin{align}
         \label{11.2-6}
-        x_{a,b}(t)=\frac{\sigma_0}{2\varepsilon_0}\delta_{a,b}+\frac{x_{a,b}}{2}[e^{i(\omega_mt+\phi)}+e^{-i(\omega_mt+\phi)}],
+        \varkappa_{a,b}(t)=\frac{\sigma_0}{2\varepsilon_0}\delta_{a,b}+\frac{\varkappa_{a,b}}{2}[e^{i(\omega_mt+\phi)}+e^{-i(\omega_mt+\phi)}],
     \end{align}
     其中
     \begin{align}
-        x_{a,b}=-\frac{\sigma}{2\varepsilon_0^2}\sqrt{\frac{\omega_b}{\omega_a}}\int_{\text{腔}}\varepsilon_1(\bm{r})\bm{E}_a\cdot\bm{E}_b\,\mathrm{d}v.
+        \varkappa_{a,b}=-\frac{\sigma}{2\varepsilon_0^2}\sqrt{\frac{\omega_b}{\omega_a}}\int_{\text{腔}}\varepsilon_1(\bm{r})\bm{E}_a\cdot\bm{E}_b\,\mathrm{d}v.
     \end{align}
     将式 \eqref{11.2-6} 回代入运动方程 \eqref{11.2-7} 得
     \begin{align}
         \label{11.2-9}
-        \frac{\mathrm{d}c_a^*}{\mathrm{d}t}=i\omega_ac_a^*+\frac{\sigma_0}{2\varepsilon_0}(c_a^*-c_a)-\sum_b\frac{x_{a,b}}{2}[e^{i(\omega_mt+\phi)}+e^{-i(\omega_mt+\phi)}](c_b^*-c_b).
+        \frac{\mathrm{d}c_a^*}{\mathrm{d}t}=i\omega_ac_a^*+\frac{\sigma_0}{2\varepsilon_0}(c_a^*-c_a)-\sum_b\frac{\varkappa_{a,b}}{2}[e^{i(\omega_mt+\phi)}+e^{-i(\omega_mt+\phi)}](c_b^*-c_b).
     \end{align}
     定义失调参数 $\Delta\omega_m$ 为调试频率与模间距 (自由光谱范围) 的偏离值
     \begin{align}
@@ -107,20 +107,20 @@
     \end{align}
     代入式 \eqref{11.2-9} 并略去相对于 $D_a^*(t)$ 的快变项得
     \begin{align}
-        \frac{\mathrm{d}D_a^*}{\mathrm{d}t}+ia\Delta\omega D_a^*=-i\frac{x}{2}D_{a+1}^*+i\frac{x}{2}D_{a-1}^*,
+        \frac{\mathrm{d}D_a^*}{\mathrm{d}t}+ia\Delta\omega D_a^*=-i\frac{\varkappa}{2}D_{a+1}^*+i\frac{\varkappa}{2}D_{a-1}^*,
     \end{align}
-    其中 $x=x_{a,a+1}\approx x_{a,a-1}$.
+    其中 $\varkappa=\varkappa_{a,a+1}\approx\varkappa_{a,a-1}$.
     稳态下 ($\frac{\mathrm{d}D_a^*}{\mathrm{d}t}=0$), 解得绝热变量为
     \begin{align}
-        D_a^*=I_a\left(\frac{x}{\Delta\omega}\right),
+        D_a^*=I_a\left(\frac{\varkappa}{\Delta\omega}\right),
     \end{align}
     其中 $I_a$ 为 $a$ 阶双曲 Bessel 函数, 从而稳态下
     \begin{align}
-        c_a^*(t)=I\left(\frac{x}{\Delta\omega}\right)e^{i[(\omega_a+a\Delta\omega_m)t+a\phi+a\pi/2]}e^{-\sigma t/2\varepsilon_0},
+        c_a^*(t)=I\left(\frac{\varkappa}{\Delta\omega}\right)e^{i[(\omega_a+a\Delta\omega_m)t+a\phi+a\pi/2]}e^{-\sigma t/2\varepsilon_0},
     \end{align}
-    其中 $\omega_a+a\Delta\omega_m=\omega_0+a\frac{\pi c}{l}+a\Delta\omega_m=\omega_0+a\omega_m$, 当 $\frac{x}{\Delta\omega_m}\gg 1$, $I_a\left(\frac{x}{\Delta\omega_m}\right)$, 从而
+    其中 $\omega_a+a\Delta\omega_m=\omega_0+a\frac{\pi c}{l}+a\Delta\omega_m=\omega_0+a\omega_m$, 当 $\frac{\varkappa}{\Delta\omega_m}\gg 1$, $I_a\left(\frac{\varkappa}{\Delta\omega_m}\right)$, 从而
     \begin{align}
-        c_a^*(t)=\left(2\pi\frac{x}{\Delta\omega}\right)^{-1/2}e^{i[(\omega_0+a\omega_m)+a\phi+a\pi/2]},
+        c_a^*(t)=\left(2\pi\frac{\varkappa}{\Delta\omega}\right)^{-1/2}e^{i[(\omega_0+a\omega_m)t+a\phi+a\pi/2]},
     \end{align}
     其中考虑到增益与损耗平衡, 故衰减因子 $\exp(-\sigma t/2\varepsilon_0)$.
     由上式可见, 各相邻振荡模式之间存在稳定的相位差 $\phi+\pi/2$, 从而可实现与调制 $\sigma$ 类似的锁模效果.
