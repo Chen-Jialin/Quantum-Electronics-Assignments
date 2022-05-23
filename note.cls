@@ -120,12 +120,16 @@
 \setlength{\headheight}{14pt}% 页眉高 Height of the header
 \renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
-\fancyhead[L]{\leftmark}% 页眉右: <当前章标题> The right of the header <current chapter title>
-\fancyhead[R]{\rightmark}% 页眉左: <当前节标题> The left of the header: <current section title>
 \ifTwoSide
+    \fancyhead[RO]{\leftmark}% 页眉右: <当前章标题> The right of the header <current chapter title>
+    \fancyhead[LO]{\rightmark}% 页眉左: <当前节标题> The left of the header: <current section title>
+    \fancyhead[LE]{\leftmark}% 页眉右: <当前章标题> The right of the header <current chapter title>
+    \fancyhead[RE]{\rightmark}% 页眉左: <当前节标题> The left of the header: <current section title>
     \fancyfoot[RO]{\thepage\ / \pageref{LastPage}}% 奇数页脚右: <当前页码> / <总页数> The right of odd page footer: <current page number> / <total page number>
     \fancyfoot[LE]{\thepage\ / \pageref{LastPage}}% 偶数页脚左: <当前页码> / <总页数> The left of even page footer: <current page number> / <total page number>
 \else
+    \fancyhead[L]{\leftmark}% 页眉右: <当前章标题> The right of the header <current chapter title>
+    \fancyhead[R]{\rightmark}% 页眉左: <当前节标题> The left of the header: <current section title>
     \fancyfoot[R]{\thepage\ / \pageref{LastPage}}% 页脚右: <当前页码> / <总页数> The right of the footer: <current page number> / <total page number>
 \fi
 
