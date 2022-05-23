@@ -66,34 +66,116 @@
 \end{pf}
 
 \begin{exe}
-    试求原子系综的感应偶极矩. 原子在场 $E_a=E_0(\omega_0t-\bm{k}_0\cdot\bm{r})+E_1\cos[(\omega_0+\Delta)t-\bm{k}_1\cdot\bm{r}]$ 作用下, 其中 $E_1\ll E_0$, 原子有共振跃迁 $E_a-E_b=\hbar\omega_0$, 并初始处于基态 $\lvert b\rangle$. 假设样品的尺寸比 $\lambda_0$ 大, 证明原子沿 $2\bm{k}_0-\bm{k}_1$ 方向辐射频率为 $\omega_0-\Delta$ 的波.
+    试求原子系综的感应偶极矩. 原子在场 $E_x=E_0\cos(\omega_0t-\bm{k}_0\cdot\bm{r})+E_1\cos[(\omega_0+\Delta)t-\bm{k}_1\cdot\bm{r}]$ 作用下, 其中 $E_1\ll E_0$, 原子有共振跃迁 $E_a-E_b=\hbar\omega_0$, 并初始处于基态 $\lvert b\rangle$. 假设样品的尺寸比 $\lambda_0$ 大, 证明原子沿 $2\bm{k}_0-\bm{k}_1$ 方向辐射频率为 $\omega_0-\Delta$ 的波.
 \end{exe}
 \begin{sol}
-
+    原子系综的态矢量遵循运动方程
+    \begin{align}
+        \frac{\mathrm{d}\bm{r}}{\mathrm{d}t}=\bm{\omega}\times\bm{r},
+    \end{align}
+    其中
+    \begin{align}
+        \notag\omega_1=&-\frac{2\mu E_x(t)}{\hbar}=-\frac{2\mu}{\hbar}\{E_0\cos(\omega_0t-\bm{k}_0\cdot\bm{r})+E_1\cos[(\omega_0+\Delta)t-\bm{k}_1\cdot\bm{r}]\}\\
+        =&-\frac{\mu}{\hbar}\{E_0\cos(\omega_0t-\bm{k}_0\cdot\bm{r})+E_0\cos(\omega_0t-\bm{k}_0\cdot\bm{r})+E_1\cos[(\omega_0+\Delta)t-\bm{k}_1\cdot\bm{r}]+E_1\cos[(\omega_0+\Delta)t-\bm{k}_1\cdot\bm{r}]\},\\
+        \notag\omega_2=&-\frac{2\mu E_y(t)}{\hbar}=0\\
+        =&-\frac{\mu}{\hbar}\{E_0\sin(\omega_0t-\bm{k}_0\cdot\bm{r})-E_0\sin(\omega_0t-\bm{k}_0\cdot\bm{r})+E_1\sin[(\omega_0+\Delta)t-\bm{k}\cdot\bm{r}]-E_1\sin[(\omega_0+\Delta)t-\bm{k}_1\cdot\bm{r}]\},\\
+        \omega_3=&\omega_0,
+    \end{align}
+    即将 $\bm{\omega}$ 中的两个线偏振矢量各分别化为两个圆偏振矢量的叠加.
+    变换到绕 3 轴以角速度 $\omega_0$ 旋转的坐标系中, 则该旋转坐标系中的态矢量 $\bm{r}_R$ 遵循运动方程
+    \begin{align}
+        \frac{\mathrm{d}\bm{r}_R}{\mathrm{d}t}=(\bm{\omega}_R-\bm{\omega}_0)\times\bm{r}_R,
+    \end{align}
+    其中
+    \begin{align}
+        \bm{\omega}_0=\begin{bmatrix}
+            0\\
+            0\\
+            \omega_0
+        \end{bmatrix}
+    \end{align}
+    在旋波近似下, $\bm{\omega}$ 旋转坐标系中的坐标为
+    \begin{align}
+        \bm{\omega}_R\approx\begin{bmatrix}
+            -\frac{\mu}{\hbar}[E_0\cos(-\bm{k}_0\cdot\bm{r})+E_1\cos(\Delta t-\bm{k}_1\cdot\bm{r})]\\
+            -\frac{\mu}{\hbar}[E_0\sin(-\bm{k}_0\cdot\bm{r})+E_1\sin(\Delta t-\bm{k}_1\cdot\bm{r})]\\
+            \omega_0
+        \end{bmatrix},
+    \end{align}
+    故运动方程变为
+    \begin{align}
+        \frac{\mathrm{d}\bm{r}_R}{\mathrm{d}t}=-\frac{\mu}{\hbar}\begin{bmatrix}
+            E_0\cos(-\bm{k}_0\cdot\bm{r})+E_1\cos(\Delta t-\bm{k}_1\cdot\bm{r})\\
+            E_0\sin(-\bm{k}_0\cdot\bm{r})+E_1\sin(\Delta t-\bm{k}_1\cdot\bm{r})\\
+            0
+        \end{bmatrix}\times\bm{r}_R.
+    \end{align}
+    $\cdots$
 \end{sol}
 
 \begin{exe}
     用任意矢量 $\bm{A}(A_1,A_2,A_3)$ 代替 $\bm{r}(t)$, 试证式 (15.1-21) 成立.\\
     提示: 取
     \[
-        \bm{A}_{R}(t)=\begin{vmatrix}
+        \bm{A}_{R}(t)=\begin{bmatrix}
             \cos\Omega t&\sin\Omega t&0\\
             -\sin\Omega t&\cos\Omega t&0\\
             0&0&1
-        \end{vmatrix}\begin{vmatrix}
+        \end{bmatrix}\begin{bmatrix}
             A_1\\
             A_2\\
             A_3
-        \end{vmatrix},
+        \end{bmatrix},
     \]
     因此
     \[
-        \frac{\mathrm{d}\bm{A}_R(t)}{\mathrm{d}t}=\overline{\overline{A}}\frac{\mathrm{d}\bm{A}}{\mathrm{d}t}+\frac{\mathrm{d}\overline{\overline{T}}}{\mathrm{d}t}\bm{A},
+        \frac{\mathrm{d}\bm{A}_R(t)}{\mathrm{d}t}=\overline{\overline{T}}\frac{\mathrm{d}\bm{A}}{\mathrm{d}t}+\frac{\mathrm{d}\overline{\overline{T}}}{\mathrm{d}t}\bm{A},
     \]
     式中 $\overline{\overline{T}}$ 是上式中的变换矩阵.
 \end{exe}
 \begin{pf}
-    
+    旋转坐标系中矢量可表为
+    \begin{align}
+        \bm{A}_R(t)=\begin{bmatrix}
+            A_1\cos\Omega t+A_2\sin\Omega t\\
+            -A_2\sin\Omega t+A_2\cos\Omega t\\
+            A_3
+        \end{bmatrix}.
+    \end{align}
+    旋转坐标系中矢量的变化量可表为
+    \begin{align}
+        \frac{\mathrm{d}\bm{r}_R}{\mathrm{d}t}=\begin{bmatrix}
+            \dot{A}_1\cos\Omega t-A_1\sin\Omega t+\dot{A}_2\sin\Omega t+A_2\cos\Omega t\\
+            -\dot{A}_1\sin\Omega t-A_1\cos\Omega t+\dot{A}_2\cos\Omega t-A_2\sin\Omega t\\
+            \dot{A}_3
+        \end{bmatrix}.
+    \end{align}
+    而又因
+    \begin{align}
+        \notag\left(\frac{\mathrm{d}\bm{A}}{\mathrm{d}t}\right)_R-\bm{\Omega}\times\bm{A}_R=&\begin{bmatrix}
+            \dot{A}_1\cos\Omega t+\dot{A}_2\sin\Omega t\\
+            -\dot{A}_2\sin\Omega t+\dot{A}_2\cos\Omega t\\
+            \dot{A}_3
+        \end{bmatrix}+\begin{vmatrix}
+            \bm{a}_I&\bm{a}_{II}&\bm{a}_{III}\\
+            0&0&\Omega\\
+            A_1\cos\Omega t+A_2\sin\Omega t&-A_1\sin\Omega+A_2\cos\Omega t&A_3
+        \end{vmatrix}\\
+        =&\begin{bmatrix}
+            \dot{A}_1\cos\Omega t+\dot{A}_2\sin\Omega t\\
+            -\dot{A}_2\sin\Omega t+\dot{A}_2\cos\Omega t\\
+            \dot{A}_3
+        \end{bmatrix}-\begin{bmatrix}
+            A_1\Omega\sin\Omega-A_2\Omega\cos\Omega t\\
+            A_1\Omega\cos\Omega t+A_2\Omega\sin\Omega t\\
+            0
+        \end{bmatrix},
+    \end{align}
+    故
+    \begin{align}
+        \frac{\mathrm{d}\bm{A}}{\mathrm{d}t}=\left(\frac{\mathrm{d}\bm{A}}{\mathrm{d}t}\right)_R-\bm{\Omega}\times\bm{A}_R,
+    \end{align}
+    此即课本式 (15.1-21).
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
