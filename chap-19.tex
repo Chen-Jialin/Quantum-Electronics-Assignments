@@ -10,7 +10,30 @@
     推导方程式 (19.2-7).
 \end{exe}
 \begin{pf}
-
+    将课本式 (19.2-3)
+    \begin{align}
+        \mathcal{E}_y=\left\{\begin{array}{ll}
+            C\exp(-qx),&0\leq x<\infty\\
+            C[\cos(hx)-(q/h)\sin(hx)],&-t\leq x\leq 0,\\
+            C[\cos(ht)+(q/h)\sin(ht)]\exp[p(x+t)],&-\infty<x\leq-t
+        \end{array}\right.
+    \end{align}
+    代入式 (19.2-6)
+    \begin{align}
+        -\frac{1}{2}\int_{-\infty}^{\infty}E_yH_x^*\,\mathrm{d}x=\frac{\beta_m}{2\omega\mu}\int_{-\infty}^{\infty}[\mathcal{E}_y^{(m)}(x)]^2\,\mathrm{d}x=1
+    \end{align}
+    中得
+    \begin{align}
+        \notag&\frac{\beta_m}{2\omega\mu}\int_{-\infty}^{\infty}[\mathcal{E}_y^{(m)}(x)]^2\,\mathrm{d}x\\
+        \notag=&C_m^2\frac{\beta_m}{2\omega\mu}\left\{\int_{-\infty}^{-t}\{[\cos(h_mt)+(q_m/h_m)\sin(h_mt)]\exp[p_m(x+t)]\}^2\,\mathrm{d}x+\int_{-t}^0[\cos(h_mx)-(q_m/h_m)\sin(h_mx)]^2\,\mathrm{d}x\right.\\
+        \notag&\left.+\int_0^{\infty}[\exp(-q_mx)]^2\,\mathrm{d}x\right\}\\
+        \notag=&C_m^2\frac{\beta_m}{2\omega\mu}\frac{1}{2h_m^2}\left(t+\frac{1}{q_m}+\frac{1}{p_m}\right)(h_m^2+q_m^2)=1,
+    \end{align}
+    故
+    \begin{align}
+        C_m=2h_m\left[\frac{\omega\mu}{\abs{\beta_m}\left(t+\frac{1}{q_m}+\frac{1}{p_m}\right)(h_m^2+q_m^2)}\right]^{1/2},
+    \end{align}
+    此即课本式 (19.2-7).
 \end{pf}
 
 \begin{exe}
