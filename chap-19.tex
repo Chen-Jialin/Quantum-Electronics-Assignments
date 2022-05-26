@@ -40,7 +40,22 @@
     证明公式 (19.7-10) 的形式与模式功率守恒一致.
 \end{exe}
 \begin{pf}
-    
+    总模式功率
+    \begin{align}
+        P\propto\abs{A_m}^2+\abs{B_m}^2=A_m^*A_m+B_m^*B_m.
+    \end{align}
+    由课本式 (19.7-10)
+    \begin{align}
+        \frac{\mathrm{d}A_m}{\mathrm{d}z}=&-i\varkappa B_me^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z},\\
+        \frac{\mathrm{d}B_m}{\mathrm{d}z}=&-i\varkappa A_me^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}.
+    \end{align}
+    故
+    \begin{align}
+        \notag\frac{\mathrm{d}P}{\mathrm{d}z}\propto&\frac{\mathrm{d}A_m^*}{\mathrm{d}z}A_m+A_m^*\frac{\mathrm{d}A_m}{\mathrm{d}z}+\frac{\mathrm{d}B_m^*}{\mathrm{d}z}B_m+B_m^*\frac{\mathrm{d}B_m}{\mathrm{d}z}\\
+        \notag=&i\varkappa B_m^*e^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}A_m+A_m^*[-i\varkappa B_me^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}]+i\kappa A_m^*e^{-i(\beta_m^{\text{TM}}-\beta_m^P\text{TE})z}B_m+B_m^*[-i\kappa A_me^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}]\\
+        =&0,
+    \end{align}
+    即模式总功率守恒.
 \end{pf}
 
 \begin{exe}
