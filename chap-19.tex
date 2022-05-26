@@ -52,7 +52,7 @@
     故
     \begin{align}
         \notag\frac{\mathrm{d}P}{\mathrm{d}z}\propto&\frac{\mathrm{d}A_m^*}{\mathrm{d}z}A_m+A_m^*\frac{\mathrm{d}A_m}{\mathrm{d}z}+\frac{\mathrm{d}B_m^*}{\mathrm{d}z}B_m+B_m^*\frac{\mathrm{d}B_m}{\mathrm{d}z}\\
-        \notag=&i\varkappa B_m^*e^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}A_m+A_m^*[-i\varkappa B_me^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}]+i\kappa A_m^*e^{-i(\beta_m^{\text{TM}}-\beta_m^P\text{TE})z}B_m+B_m^*[-i\kappa A_me^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}]\\
+        \notag=&i\varkappa B_m^*e^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}A_m+A_m^*\left[-i\varkappa B_me^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}\right]+i\kappa A_m^*e^{-i(\beta_m^{\text{TM}}-\beta_m^P\text{TE})z}B_m+B_m^*\left[-i\kappa A_me^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}\right]\\
         =&0,
     \end{align}
     即模式总功率守恒.
@@ -62,7 +62,27 @@
     推导式 (19.7-12) 中的两个方程.
 \end{exe}
 \begin{pf}
-    
+    由课本式 (19.7-10)
+    \begin{align}
+        \label{19.3-1}
+        \frac{\mathrm{d}A_m}{\mathrm{d}z}=&-i\varkappa B_me^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z},\\
+        \label{19.3-2}
+        \frac{\mathrm{d}B_m}{\mathrm{d}z}=&-i\varkappa A_me^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z},
+    \end{align}
+    出发, 取式 \eqref{19.3-1} 关于 $z$ 的微分并利用式 \eqref{19.3-1} 和式 \eqref{19.3-2} 消去 $B_m$ 和 $\frac{\mathrm{d}B_m}{\mathrm{d}z}$ 得
+    \begin{align}
+        \frac{\mathrm{d}^2A_m}{\mathrm{d}z^2}+i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})\frac{\mathrm{d}A_m}{\mathrm{d}z}+\varkappa^2A_m=0,
+    \end{align}
+    考虑到边界条件 $A_m(0)=0$ 和 $\frac{\mathrm{d}A_m}{\mathrm{d}z}(0)=-i\varkappa B_0$, 解得
+    \begin{align}
+        A_m(z)=-iB_0e^{-i\delta z}\frac{\varkappa}{(\varkappa^2+\delta^2)^{1/2}}\sin[(\varkappa^2+\delta^2)^{1/2}z],
+    \end{align}
+    其中 $2\delta\equiv\beta_m^{\text{TM}}-\beta_m^{\text{TE}}$.
+    将上式代回式 \eqref{19.3-1} 中可得
+    \begin{align}
+        B_m(z)=\frac{i}{\varkappa}\frac{\mathrm{d}A_m}{\mathrm{d}z}e^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}=B_0e^{i\delta z}\left\{\cos[(\varkappa^2+\delta^2)^{1/2}z]-i\frac{\delta}{(\kappa^2+\delta^2)^{1/2}}\sin[(\kappa^2+\delta^2)^{1/2}z]\right\},
+    \end{align}
+    此即课本式 (19.7-12).
 \end{pf}
 
 \begin{exe}
@@ -92,7 +112,7 @@
 \end{sol}
 
 \begin{exe}
-    对于如图 19.15 所示的漏泄型波导, 推导 $TM$ 模的传播常数 $\gamma$.
+    对于如图 19.15 所示的漏泄型波导, 推导 TM 模的传播常数 $\gamma$.
 \end{exe}
 \begin{sol}
     
