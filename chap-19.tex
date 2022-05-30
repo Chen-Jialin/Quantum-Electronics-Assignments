@@ -108,7 +108,30 @@
     在 $n_1=1$, $n_2=3.5$, $n_3=3.4$, $t=3$ 微米, $a=500$ 埃, $\lambda=0.85$ 微米, $L=100$, $300$, $500$ 微米的情况下, 计算无损耗的砷化镓 (\ce{GaAs}) 分布反馈激光器的阈值增益常数. 画出增益与 $L$ 的关系曲线.
 \end{exe}
 \begin{sol}
-    
+    假设方波纹状周期性波导的折射率改变量空间周期 $\Lambda=0.11\,\mu$m, 激光模式为基模, 且处于完全束缚状态 (模式频率远远超过传播截止值) 下.
+    此时激光模式的传输常数 $\beta_s=\beta_1\approx\frac{2\pi n_2}{\lambda}$, 周期性波导的空间频率为 $\frac{2l\pi}{\Lambda}=\frac{2\pi}{\Lambda}$ 与之耦合, 从而满足相位匹配条件
+    \begin{align}
+        \frac{2l\pi}{\Lambda}-\beta_s\approx\beta_s,
+    \end{align}
+    此时相位适配因子 (的一半) 为
+    \begin{align}
+        \Delta\beta=\beta_s-\frac{l\pi}{\Lambda}=-2.688\times 10^6\,\text{m}^{-1}.
+    \end{align}
+    耦合常数为
+    \begin{align}
+        \varkappa\approx\frac{2\pi^2s^2}{3l\lambda}\frac{n_2^2-n_1^2}{n_2}\left(\frac{a}{t}\right)^3\left[1+\frac{3}{2\pi}\frac{\lambda/a}{(n_2^2-n_1^2)^{1/2}}+\frac{3}{4\pi^2}\frac{(\lambda/a)^2}{(n_2^2-n_1^2)}\right]=618.8\,\text{m}^{-1}.
+    \end{align}
+    由
+    \begin{align}
+        \frac{e^{2\gamma L}}{\gamma^2}=\frac{4}{\varkappa^2}
+    \end{align}
+    得阈值增益 $\gamma$ 与长度 $L$ 的关系曲线如图 \ref{19.7-fig} 所示, 在 $L=100$, $300$, $500\,\mu$m 的情况下, 阈值增益 $\gamma$ 分别为 $900$ cm$^{-1}$, $300$ cm$^{-1}$, $180$ cm$^{-1}$.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.5\columnwidth]{Figures/19.7.png}
+        \caption{阈值增益 $\gamma$ 与长度 $L$ 之间的关系曲线.}
+        \label{19.7-fig}
+    \end{figure}
 \end{sol}
 
 \begin{exe}
