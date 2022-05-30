@@ -53,7 +53,7 @@
     \begin{align}
         \notag\frac{\mathrm{d}P}{\mathrm{d}z}\propto&\frac{\mathrm{d}A_m^*}{\mathrm{d}z}A_m+A_m^*\frac{\mathrm{d}A_m}{\mathrm{d}z}+\frac{\mathrm{d}B_m^*}{\mathrm{d}z}B_m+B_m^*\frac{\mathrm{d}B_m}{\mathrm{d}z}\\
         \notag=&i\varkappa B_m^*e^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}A_m+A_m^*\left[-i\varkappa B_me^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}\right]+i\varkappa A_m^*e^{-i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}B_m+B_m^*\left[-i\varkappa A_me^{i(\beta_m^{\text{TM}}-\beta_m^{\text{TE}})z}\right]\\
-        =&0,
+        =&0,h
     \end{align}
     即模式总功率守恒.
 \end{pf}
@@ -115,7 +115,6 @@
     对于如图 19.15 所示的漏泄型波导, 推导 TM 模的传播常数 $\gamma$.
 \end{exe}
 \begin{sol}
-    
 \end{sol}
 
 \begin{exe}
@@ -128,12 +127,43 @@
     利用一维薛定谔方程和波动方程 (19.1-3) 之间形式上的相似性, 证明在无损耗波导中存在类似式 (1.2-5) 的方程\\
     在 $l\neq 0$ 时,
     \[
-        \int_{-\infty}^{\infty}\mathcal{E}_y^{(l)}\mathcal{E}_y^{(m)}\,\mathrm{d}x=0
+        \int_{-\infty}^{\infty}\mathcal{E}_y^{(l)}(x)\mathcal{E}_y^{(m)}(x)\,\mathrm{d}x=0
     \]
     提示: 为了在两个微分方程之间建立相似关系, 假定解具有式 (19.2-2) 的形式.
 \end{exe}
 \begin{pf}
-    
+    将课本中波动方程 (19.1-3)
+    \begin{align}
+        \left(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}\right)\bm{E}(x,y)+[k^2n^2(\bm{r})-\beta^2]\bm{E}(x,y)=0
+    \end{align}
+    中的 $\bm{E}(x,y)$ 换成 $\mathcal{E}^{(l)}(x)$ 和 $\mathcal{E}_y^{(m)}(x)$ 得
+    \begin{align}
+        \label{19.10-1}
+        \nabla^2\mathcal{E}_y^{(l)}(x)+[k^2n^2-(\beta^{(l)})^2]\mathcal{E}_y^{(l)}(x)=&0,\\
+        \label{19.10-2}
+        \nabla^2\mathcal{E}_y^{(m)}(x)+[k^2n^2-(\beta^{(m)})^2]\mathcal{E}_y^{(m)}(x)=&0.
+    \end{align}
+    将式 \label{19.10-1} 乘 $\mathcal{E}_y^{(m)}(x)$, 将式 \eqref{19.10-2} 乘 $\mathcal{E}_y^{(l)}(x)$, 再将两者相减得
+    \begin{align}
+        \mathcal{E}_y^{(m)}\nabla^2\mathcal{E}_y^{(l)}+\mathcal{E}_y^{(l)}\nabla^2\mathcal{E}_y^{(m)}=[(\beta^{(l)})^2-(\beta^{(m)})^2]\mathcal{E}_y^{(l)}\mathcal{E}_y^{(m)}.
+    \end{align}
+    上式关于全空间积分得
+    \begin{align}
+        \iiint_{\text{全空间}}[\mathcal{E}_y^{(m)}\nabla^2\mathcal{E}_y^{(l)}+\mathcal{E}_y^{(l)}\nabla^2\mathcal{E}_y^{(m)}]\,\mathrm{d}v=[(\beta^{(l)})^2-(\beta^{(m)})^2]\iiint_{\text{全空间}}\mathcal{E}_y^{(l)}\mathcal{E}_y^{(m)}\,\mathrm{d}v.
+    \end{align}
+    再利用格林定理得
+    \begin{align}
+        \iint_{\text{包围全空间的二维闭合曲面}}[\mathcal{E}_y^{(m)}\nabla\mathcal{E}_y^{(l)}+\mathcal{E}_y^{(l)}\nabla\mathcal{E}_y^{(m)}]\cdot\bm{n}\,\mathrm{d}a=[(\beta^{(l)})^2-(\beta^{(m)})^2]\iiint_{\text{全空间}}\mathcal{E}_y^{(l)}\mathcal{E}_y^{(m)}\,\mathrm{d}v.
+    \end{align}
+    由于无穷远处 $\mathcal{E}_y^{(l/m)}$ 和 $\mathcal{E}_y^{(l/m)}$ 均 $\rightarrow 0$, 故
+    \begin{align}
+        [(\beta^{(l)})^2-(\beta^{(m)})^2]\iiint_{\text{全空间}}\mathcal{E}_y^{(l)}\mathcal{E}_y^{(m)}\,\mathrm{d}v=0.
+    \end{align}
+    又因为对 $l\neq m$, 通常 $(\beta^{(l)})^2\neq(\beta^{(m)})^2$, 故
+    \begin{gather}
+        \iiint_{\text{全空间}}\mathcal{E}_y^{(l)}(x)\mathcal{E}_y^{(m)}(x)\,\mathrm{d}v=0,\\
+        \Longrightarrow\int_{-\infty}^{\infty}\mathcal{E}_y^{(l)}(x)\mathcal{E}_y^{(m)}(x)\,\mathrm{d}x=0.
+    \end{gather}
 \end{pf}
 \ifx\allfiles\undefined
 \end{document}
